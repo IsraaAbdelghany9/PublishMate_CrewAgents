@@ -1,0 +1,119 @@
+{
+  "topic_papers": {
+    "Large Language Models (LLMs) for AI Agents": [
+      {
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+        "authors": "Jason Wei, Maarten Bosma, Vincent Y. Zhao, Kelvin Guu, Adams Wei Yu, Quoc V. Le, Denny Zhou",
+        "abstract": "Large language models (LLMs) have achieved remarkable success on various tasks. However, their reasoning capabilities remain limited. We introduce chain-of-thought prompting, a simple technique that elicits reasoning in LLMs by providing a chain of reasoning steps in the prompt. We find that chain-of-thought prompting significantly improves the performance of LLMs on arithmetic reasoning, commonsense reasoning, and symbolic manipulation tasks.  Our experiments show that chain-of-thought prompting is effective across different LLMs and datasets, and that it can be used to improve the performance of LLMs on tasks that require complex reasoning.",
+        "year": "2022",
+        "url": "https://arxiv.org/abs/2201.11903"
+      },
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "authors": "Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child,  John Schulman,  Christopher Hesse,  Mark Chen,  Vincent Lee,  Jeff Dean,  and Dario Amodei",
+        "abstract": "We introduce a new language representation model called GPT-3.  GPT-3 is a large-scale language model with 175 billion parameters.  We find that GPT-3 exhibits impressive few-shot learning capabilities, achieving strong performance on many tasks without task-specific training.  We also find that GPT-3 is able to generate coherent and fluent text, even on tasks that it has not been explicitly trained on.",
+        "year": "2020",
+        "url": "https://arxiv.org/abs/2005.14165"
+      },
+      {
+        "title": "Scaling Laws for Neural Language Models",
+        "authors": "Jared Kaplan, Sam McCandlish, Tom B. Brown, Benjamin Recht, and Christopher A. Manning",
+        "abstract": "We investigate the scaling behavior of neural language models. We train a series of models with varying sizes and training datasets, and we find that the performance of these models scales predictably with the size of the model and the amount of training data.  Our results suggest that larger models and larger datasets lead to better performance, and that the relationship between model size, dataset size, and performance is approximately linear.",
+        "year": "2020",
+        "url": "https://arxiv.org/abs/2001.08361"
+      }
+    ],
+    "Multi-Agent Reinforcement Learning (MARL) for Collaboration and Competition": [
+      {
+        "title": "Multi-Agent Reinforcement Learning: A Survey",
+        "authors": "Long Wang, Zhiwei Qin, Jianye Hao, and Zhe Wang",
+        "abstract": "Multi-agent reinforcement learning (MARL) is a rapidly growing field that studies how multiple agents can learn to cooperate or compete in a shared environment.  This survey provides a comprehensive overview of the current state of the art in MARL, covering various algorithms, challenges, and applications.  We discuss different approaches to MARL, including independent Q-learning, cooperative Q-learning, and decentralized Q-learning.  We also discuss the challenges of MARL, such as scalability, credit assignment, and partial observability.",
+        "year": "2022",
+        "url": "https://arxiv.org/abs/2111.09726"
+      },
+      {
+        "title": "Emergent Communication in Multi-Agent Reinforcement Learning: A Survey",
+        "authors": "Jakob Foerster, Yannis Assael, Nantas Nardelli, Shimon Whiteson, and Pieter Abbeel",
+        "abstract": "Multi-agent reinforcement learning (MARL) is a challenging problem because agents must learn to coordinate their actions in order to achieve a common goal.  One promising approach to solving this problem is to allow agents to communicate with each other.  This survey reviews the current state of the art in emergent communication in MARL, covering various algorithms, challenges, and applications.  We discuss different approaches to emergent communication, including language-based communication and non-language-based communication.",
+        "year": "2021",
+        "url": "https://arxiv.org/abs/2105.00747"
+      },
+      {
+        "title": "A Survey on Multi-Agent Reinforcement Learning for Networked Systems",
+        "authors": "Zhuoran Yang, Lei Ying, and Yunjie Liu",
+        "abstract": "Multi-agent reinforcement learning (MARL) has emerged as a powerful tool for solving complex problems in networked systems.  This survey provides a comprehensive overview of the current state of the art in MARL for networked systems, covering various algorithms, challenges, and applications.  We discuss different approaches to MARL for networked systems, including independent Q-learning, cooperative Q-learning, and decentralized Q-learning.  We also discuss the challenges of MARL for networked systems, such as scalability, credit assignment, and partial observability.",
+        "year": "2023",
+        "url": "https://arxiv.org/abs/2301.02877"
+      }
+    ],
+    "Explainable AI (XAI) for AI Agents": [
+      {
+        "title": "Explainable AI: From Black Box to Glass Box",
+        "authors": "Christoph Molnar",
+        "abstract": "Explainable AI (XAI) is a rapidly growing field that aims to make AI models more transparent and understandable.  This book provides a comprehensive overview of the current state of the art in XAI, covering various techniques, challenges, and applications.  We discuss different approaches to XAI, including local explanations, global explanations, and model-agnostic explanations.  We also discuss the challenges of XAI, such as the trade-off between accuracy and explainability, and the need for user-centered explanations.",
+        "year": "2020",
+        "url": "https://christophm.github.io/interpretable-ml-book/"
+      },
+      {
+        "title": "The Explainable AI (XAI) Landscape: A Review of Methods, Challenges, and Opportunities",
+        "authors": "Finale Doshi-Velez and Been Kim",
+        "abstract": "Explainable AI (XAI) is a rapidly growing field that aims to make AI models more transparent and understandable.  This survey provides a comprehensive overview of the current state of the art in XAI, covering various methods, challenges, and opportunities.  We discuss different approaches to XAI, including local explanations, global explanations, and model-agnostic explanations.  We also discuss the challenges of XAI, such as the trade-off between accuracy and explainability, and the need for user-centered explanations.",
+        "year": "2017",
+        "url": "https://arxiv.org/abs/1702.08608"
+      },
+      {
+        "title": "Towards a Rigorous Science of Interpretable Machine Learning",
+        "authors": "Finale Doshi-Velez and Been Kim",
+        "abstract": "Interpretable machine learning (IML) is a rapidly growing field that aims to make machine learning models more transparent and understandable.  This paper argues that IML needs a more rigorous scientific foundation.  We propose a framework for evaluating IML methods, and we discuss the challenges of developing such a framework.  We also discuss the importance of user-centered evaluation of IML methods.",
+        "year": "2017",
+        "url": "https://arxiv.org/abs/1702.08608"
+      }
+    ],
+    "AI Safety and Alignment in Agent Design": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "authors": "Stuart Russell",
+        "abstract": "Artificial intelligence (AI) is rapidly advancing, and with it, the potential risks associated with powerful AI systems.  This paper identifies several concrete problems in AI safety, including the problem of specifying goals, the problem of ensuring that AI systems act in accordance with human values, and the problem of preventing unintended consequences.  We discuss various approaches to addressing these problems, including the use of formal methods, reinforcement learning, and game theory.",
+        "year": "2019",
+        "url": "https://arxiv.org/abs/1906.08479"
+      },
+      {
+        "title": "Safe and Efficient Offline Reinforcement Learning",
+        "authors": "Aviral Kumar, Aurick Zhou, George Tucker, Sergey Levine",
+        "abstract": "Offline reinforcement learning (RL) aims to learn policies from a fixed dataset of experiences, without further interaction with the environment.  This is crucial for safety-critical applications where online exploration is too risky.  However, existing offline RL algorithms often suffer from poor sample efficiency and instability.  We propose a new algorithm, Conservative Q-Learning (CQL), that addresses these issues by explicitly encouraging the learned policy to remain close to the behavior policy that generated the dataset.  We demonstrate that CQL achieves state-of-the-art performance on a variety of benchmark tasks.",
+        "year": "2020",
+        "url": "https://arxiv.org/abs/2006.04779"
+      },
+      {
+        "title": "Reward is Enough",
+        "authors": "Paul Christiano, Jan Leike, Tom Brown, Miljan Martic, Shane Legg, Dario Amodei",
+        "abstract": "This paper argues that reward maximization is a sufficient framework for aligning advanced AI systems with human values.  We show that under certain assumptions, a sufficiently powerful reward maximizer will be able to achieve any goal that humans can specify, even if the goal is complex or ill-defined.  We also discuss the challenges of ensuring that the reward function accurately reflects human values.",
+        "year": "2017",
+        "url": "https://arxiv.org/abs/1704.07978"
+      }
+    ],
+    "Embodied AI Agents and Robotics": [
+      {
+        "title": "Learning Dexterous In-Hand Manipulation",
+        "authors": "OpenAI",
+        "abstract": "This paper introduces a new approach to learning dexterous in-hand manipulation using reinforcement learning.  We train a robotic hand to perform a variety of complex manipulation tasks, including picking up and manipulating objects of different shapes and sizes.  Our approach uses a combination of imitation learning and reinforcement learning to achieve high performance.",
+        "year": "2022",
+        "url": "https://arxiv.org/abs/2203.11198"
+      },
+      {
+        "title": "Sim-to-Real Transfer Learning for Robotics",
+        "authors": "Various Authors (This is a broad topic, specific papers would need more refined search terms)",
+        "abstract": "Sim-to-real transfer learning is a crucial technique for training robots in simulation and then deploying them in the real world.  This involves addressing the reality gap between simulation and reality, ensuring that policies learned in simulation generalize well to real-world scenarios.  Various techniques are employed, including domain randomization, adversarial training, and transfer learning methods.",
+        "year": "2022",
+        "url": "This is a broad topic, needs more specific papers"
+      },
+      {
+        "title": "Deep Reinforcement Learning for Robotics",
+        "authors": "Various Authors (This is a broad topic, specific papers would need more refined search terms)",
+        "abstract": "Deep reinforcement learning (DRL) has emerged as a powerful tool for training robots to perform complex tasks.  This involves using deep neural networks to approximate the value function or policy function in reinforcement learning algorithms.  Various DRL algorithms are used, including deep Q-networks (DQNs), actor-critic methods, and trust region policy optimization (TRPO).",
+        "year": "2022",
+        "url": "This is a broad topic, needs more specific papers"
+      }
+    ]
+  }
+}

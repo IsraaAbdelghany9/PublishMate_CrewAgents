@@ -1,2 +1,7 @@
 # Ignore virtual environment
 myenv/
+
+
+.env
+
+.history
