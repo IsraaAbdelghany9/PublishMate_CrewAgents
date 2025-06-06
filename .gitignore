@@ -1,7 +1,25 @@
 # Ignore virtual environment
 myenv/
 
-
 .env
 
 .history
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Output folders
+PublishMate_agent_ouput/
+Notebooks/PublishMate_agent_ouput/
+
+# Logs
+*.log
+logs/
+agentops.log
+
+# IDE/editor files (optional)
+.vscode/
+.idea/
