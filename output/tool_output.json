@@ -1,0 +1,44 @@
+{
+  "query": "Efficient Transformers for Long Sequences 2023-2025 arxiv ieee springer",
+  "follow_up_questions": null,
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "title": "ESSformer: Transformers with ESS Attention for Long-Term ... - Springer",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-72347-6_15",
+      "content": "Liu, Y., Wu, H., Wang, J., Long, M.: Non-stationary transformers: rethinking the stationarity in time series forecasting. Nie, Y., Nguyen, N.H., Sinthong, P., Kalagnanam, J.: A time series is worth 64 words: long-term forecasting with transformers. Wang, H., Peng, J., Huang, F., Wang, J., Chen, J., Xiao, Y.: Micn: multi-scale local and global context modeling for long-term series forecasting. Wu, H., Xu, J., Wang, J., Long, M.: Autoformer: Decomposition transformers with auto-correlation for long-term series forecasting. Wu, H., Hu, T., Liu, Y., Zhou, H., Wang, J., Long, M.: TimesNet temporal 2D-variation modeling for general time series analysis. Zhang, F., Guo, T., Wang, H.: DFNet: decomposition fusion model for long sequence time-series forecasting. Zhou, H., et al.: Informer: Beyond efficient transformer for long sequence time-series forecasting.",
+      "score": 0.487918,
+      "raw_content": null
+    },
+    {
+      "title": "LongT5-Mulla: LongT5 With Multi-Level Local Attention for ... - IEEE Xplore",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10348571",
+      "content": "Efficient Transformer models typically employ local and global attention methods, or utilize hierarchical or recurrent architectures, to process long text inputs in natural language processing tasks. However, these models face challenges in terms of sacrificing either efficiency, accuracy, or compatibility to develop their application in longer sequences. To maintain both the accuracy of",
+      "score": 0.43338245,
+      "raw_content": null
+    },
+    {
+      "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+      "url": "https://arxiv.org/abs/2112.07916",
+      "content": "Recent work has shown that either (1) increasing the input length or (2) increasing model size can improve the performance of Transformer-based neural models. In this paper, we present a new model, called LongT5, with which we explore the effects of scaling both the input length and model size at the same time. Specifically, we integrated attention ideas from long-input transformers (ETC), and",
+      "score": 0.36161602,
+      "raw_content": null
+    },
+    {
+      "title": "LongSum: An Efficient Transformer for Long Document ... - Springer",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-97-5779-4_27",
+      "content": "In: Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). In: Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers). Huang, L., Cao, S., Parulian, N., Ji, H., Wang, L.: Efficient attentions for long document summarization. In: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. In: Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). In: Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers).",
+      "score": 0.28540727,
+      "raw_content": null
+    },
+    {
+      "title": "Memory-efficient tensor parallelism for long-sequence Transformer ...",
+      "url": "https://link.springer.com/article/10.1631/FITEE.2400602",
+      "content": "Memory-efficient tensor parallelism for long-sequence Transformer training To solve these weaknesses, we propose a general parallelism method called memory-efficient tensor parallelism (METP), designed for the computation of two consecutive matrix multiplications and a possible function between them (O = f(AB)C), which is the kernel computation component in Transformer training. Proc 34th Int Conf on Neural Information Processing Systems, Article 159. Proc 36th Int Conf on Neural Information Processing Systems, Article 1189. Proc 33rd Int Conf on Neural Information Processing Systems, Article 10. Efficient large-scale language model training on GPU clusters using Megatron-LM. Proc 38th Int Conf on Machine Learning, p.7937\u20137947. Proc 33rd Int Conf on Neural Information Processing Systems, Article 394. Memory-efficient tensor parallelism for long-sequence Transformer training.",
+      "score": 0.24069467,
+      "raw_content": null
+    }
+  ],
+  "response_time": 1.99
+}

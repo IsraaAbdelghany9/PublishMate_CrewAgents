@@ -1,5 +1,3 @@
-# streamlit_app_2.py
-
 import os
 import json
 import sys
@@ -18,7 +16,7 @@ from agents.Paper_Structure_and_Writing_Guide_Agent import create_paper_structur
 from agents.Related_work_draft_Agent import create_related_work_agent_task
 from agents.Paper_draft_Agent import create_draft_writer_agent_task
 
-
+# File paths
 trending_topics_path = "PublishMate_agent_ouput/step_1_trending_topics.json"
 recent_papers_path = "PublishMate_agent_ouput/step_2_recent_papers.json"
 research_gaps_path = "PublishMate_agent_ouput/step_3_research_gaps.json"
@@ -27,6 +25,68 @@ paper_structure_path = "PublishMate_agent_ouput/step_5_paper_structure.json"
 related_work_path = "PublishMate_agent_ouput/step_6_related_work.json"
 draft_path = "PublishMate_agent_ouput/step_7_paper_draft.json"
 
+intro_prompt = (
+    "Welcome to PublishMate! I am your research assistant mate here to help you with your academic paper journey.\n"
+    "I will guide you step-by-step to find trending topics, recent papers, summaries, "
+    "research gaps, and help with paper writing. \nLet's get started!\n"
+)
+
+# Styling
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f5f7fa;
+        color: #333333;
+    }
+    .main-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #357ABD;
+        margin-bottom: 15px;
+    }
+    .intro-box {
+        background-color: #eeeeee;
+        padding: 15px 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 25px;
+    }
+    .section-title {
+        background-color: #357ABD;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+def styled_section_title(text):
+    st.markdown(f'<div class="section-title">{text}</div>', unsafe_allow_html=True)
+
+# Title and Intro
+st.markdown('<div class="main-title">Welcome to Publish Mate 😊</div>', unsafe_allow_html=True)
+st.markdown(f'<div class="intro-box">{intro_prompt.replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
+
+# Session state init
+if "first_task_done" not in st.session_state:
+    st.session_state.first_task_done = False
+if "chosen_topic" not in st.session_state:
+    st.session_state.chosen_topic = ""
+if "chosen_gap" not in st.session_state:
+    st.session_state.chosen_gap = ""
 
 def read_json_file(filepath):
     try:
@@ -46,16 +106,6 @@ def run_crew(crew):
         st.success("Task completed!")
     except Exception as e:
         st.error(f"Error running tasks: {e}")
-
-st.title("Research AI Agents")
-
-# Initialize session state for control flow
-if "first_task_done" not in st.session_state:
-    st.session_state.first_task_done = False
-if "chosen_topic" not in st.session_state:
-    st.session_state.chosen_topic = ""
-if "chosen_gap" not in st.session_state:
-    st.session_state.chosen_gap = ""
 
 research_field = st.text_input("Enter your research field:")
 
@@ -80,12 +130,12 @@ if research_field:
         recent_papers = read_json_file(recent_papers_path)
         research_gaps = read_json_file(research_gaps_path)
 
-        st.write("### Trending Topics")
+        styled_section_title("Trending Topics")
         for topic in trending_topics.get("topics", []):
             st.subheader(topic.get("name", "No Name"))
             st.write(topic.get("description", "No Description"))
 
-        st.write("### Recent Papers")
+        styled_section_title("Recent Papers")
         topic_papers = recent_papers.get("topic_papers", {})
         if topic_papers:
             for topic, papers in topic_papers.items():
@@ -99,7 +149,7 @@ if research_field:
         else:
             st.info("No papers found, try again.")
 
-        st.write("### Research Gaps")
+        styled_section_title("Research Gaps")
         for gap in research_gaps.get("research_gaps", []):
             st.write(f"- {gap}")
 
@@ -131,19 +181,18 @@ if research_field:
             related_work = read_json_file(related_work_path)
             draft = read_json_file(draft_path)
 
-            st.write("### Research Starting Points")
-            steps = research_starting_points.get("research_steps", [])
-            for idx, step in enumerate(steps, 1):
+            styled_section_title("Research Starting Points")
+            for idx, step in enumerate(research_starting_points.get("research_steps", []), 1):
                 st.subheader(f"{idx}. {step.get('section', 'No Section')}")
                 st.write(step.get("tips", "No Tips"))
 
-            st.write("### Paper Structure Guide")
+            styled_section_title("Paper Structure Guide")
             for section in paper_structure.get("paper_structure", []):
                 st.subheader(section.get("section", "No Section"))
                 st.write(section.get("tips", "No Tips"))
 
-            st.write("### Related Work Draft")
+            styled_section_title("Related Work Draft")
             st.write(related_work.get("related_work", "No related work content."))
 
-            st.write("### Paper Draft")
+            styled_section_title("Paper Draft")
             st.write(draft.get("draft", "No draft content."))
