@@ -8,7 +8,7 @@ from typing import List, Dict
 
 from pydantic import BaseModel, Field
 
-import google.generativeai as genai
+# import google.generativeai as genai
 
 from crewai import Agent, Task, Crew, LLM
 from crewai.tools import tool
