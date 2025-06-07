@@ -26,6 +26,8 @@ research_starting_points_path = "PublishMate_agent_ouput/step_4_research_startin
 paper_structure_path = "PublishMate_agent_ouput/step_5_paper_structure.json"
 related_work_path = "PublishMate_agent_ouput/step_6_related_work.json"
 draft_path = "PublishMate_agent_ouput/step_7_paper_draft.json"
+tool_output = "output/tool_output.json"
+
 
 def read_json_file(filepath):
     try:
@@ -111,7 +113,6 @@ st.markdown(
 )
 
 # Page title and intro
-# Page title and intro
 st.markdown(
     """
     <style>
@@ -186,7 +187,8 @@ if research_field:
         trending_topics = read_json_file(trending_topics_path)
         recent_papers = read_json_file(recent_papers_path)
         research_gaps = read_json_file(research_gaps_path)
-
+        tool_output_json = read_json_file(tool_output)
+        
         st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
         st.markdown("### Trending Topics")
         if trending_topics.get("topics"):
@@ -199,18 +201,32 @@ if research_field:
 
         st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
         st.markdown("### Recent Papers")
+
         topic_papers = recent_papers.get("topic_papers", {})
-        if topic_papers:
+
+        # Check if any topic has papers
+        has_papers = any(len(papers) > 0 for papers in topic_papers.values())
+
+        if has_papers:
             for topic, papers in topic_papers.items():
-                st.markdown(f"**{topic}**")
-                for paper in papers:
-                    st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
-                    st.markdown(f"  - **Year:** {paper.get('year', 'N/A')}")
-                    st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
-                    st.markdown(f"  - **Abstract:** {paper.get('abstract', 'No Abstract')}")
-                    st.markdown("---")
+                if papers:  # only print topics with papers
+                    st.markdown(f"**{topic}**")
+                    for paper in papers:
+                        st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
+                        st.markdown(f"  - **Year:** {paper.get('year', 'N/A')}")
+                        st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
+                        st.markdown(f"  - **Abstract:** {paper.get('abstract', 'No Abstract')}")
+                        st.markdown("---")
         else:
-            st.info("No papers found, try again.")
+            output_tool_papers = tool_output_json.get("results", [])
+            st.info("All Papers found:")
+
+            for paper in output_tool_papers:
+                st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
+                st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
+                st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
+                st.markdown("---")
+
 
         st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
         st.markdown("### Research Gaps")

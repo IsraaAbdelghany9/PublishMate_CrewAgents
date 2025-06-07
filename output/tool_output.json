@@ -1,44 +1,44 @@
 {
-  "query": "Transformer Applications beyond NLP 2023-2025 arxiv ieee springer",
+  "query": "Improving Transformer Robustness and Generalization 2023-2025 arxiv ieee springer",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "Transformers Beyond NLP: Expanding Horizons in Machine Learning - SSRN",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5110547",
-      "content": "Transformers Beyond NLP: Expanding Horizons in Machine Learning by Srikanth Kamatala, Anil Kumar Jonnalagadda, Prudhvi Naayini :: SSRN Top Papers Top Papers Kamatala, Srikanth and Jonnalagadda, Anil Kumar and Naayini, Prudhvi, Transformers Beyond NLP: Expanding Horizons in Machine Learning (January 21, 2025). We use cookies to help provide and enhance our service and tailor content. To learn more, visit Cookie Settings. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. #### Functional Cookies - [x] Functional Cookies  If you do not allow these cookies then some or all of these services may not function properly. These cookies may be set through our site by our advertising partners.",
-      "score": 0.4431913,
+      "title": "A Theoretical Framework for OOD Robustness in Transformers using Gevrey ...",
+      "url": "https://arxiv.org/pdf/2504.12991v2",
+      "content": "arXiv:2504.12991v2 [cs.LG] 30 May 2025 A Theoretical Framework for OOD Robustness in Transformers using Gevrey Classes Yu Wang* 1 Fu-Chieh Chang* 1 2 Pei-Yuan Wu1 Abstract We study the robustness of Transformer language models under semantic out-of-distribution (OOD) shifts, where training and test data lie in dis-joint latent spaces.",
+      "score": 0.4757764,
       "raw_content": null
     },
     {
-      "title": "Advancements in Natural Language Processing: Exploring Transformer ...",
-      "url": "https://arxiv.org/abs/2503.20227",
-      "content": "[2503.20227] Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding Title:Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding View a PDF of the paper titled Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding, by Tianhao Wu and 1 other authors Comments:This paper has been accepted by the 5th International Conference on Artificial Intelligence and Industrial Technology Applications (AIITA 2025)Subjects:Computation and Language (cs.CL); Artificial Intelligence (cs.AI)Cite as:arXiv:2503.20227 [cs.CL]\u00a0(or arXiv:2503.20227v1 [cs.CL] for this version)\u00a0https://doi.org/10.48550/arXiv.2503.20227Focus to learn morearXiv-issued DOI via DataCite (pending registration) View a PDF of the paper titled Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding, by Tianhao Wu and 1 other authors Bibliographic Explorer Toggle Connected Papers Toggle Links to Code Toggle Links to Code Toggle",
-      "score": 0.42062396,
+      "title": "[2311.17400] Improving the Robustness of Transformer-based Large ...",
+      "url": "https://arxiv.org/abs/2311.17400",
+      "content": "arXiv smileybones ## arXiv Is Hiring a DevOps Engineer arXiv Is Hiring a DevOps Engineer arxiv logo arXiv logo Cornell University Logo ### References & Citations ## BibTeX formatted citation BibSonomy logo # Bibliographic and Citation Tools # Recommenders and Search Tools # arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. Have an idea for a project that will add value for arXiv's community? arXiv Operational Status   ",
+      "score": 0.37614232,
       "raw_content": null
     },
     {
-      "title": "Transformer Model Applications: A Comprehensive Survey and ... - Springer",
-      "url": "https://link.springer.com/chapter/10.1007/978-981-97-4533-3_3",
-      "content": "Wolf T, Debut L, Sanh V, Chaumond J, Delangue C, Moi A, Cistac P, Rault T, Louf R, Funtowicz M et al (2020) Transformers: state-of-the-art natural language processing. Lewis M, Liu Y, Goyal N, Ghazvininejad M, Mohamed A, Levy O, Stoyanov V, Zettlemoyer L (2019) Bart: denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. Dong L, Yang N, Wang W, Wei F, Liu X, Wang Y, Gao J, Zhou M, Hon HW (2019) Unified language model pre-training for natural language understanding and generation. Bao H, Dong L, Wei F, Wang W, Yang N, Liu X, Wang Y, Gao J, Piao S, Zhou M et al (2020) Unilmv2: Pseudo-masked language models for unified language model pre-training.",
-      "score": 0.34640914,
+      "title": "Improving Transformer Inference Through Optimized ... - IEEE Xplore",
+      "url": "https://ieeexplore.ieee.org/document/10738457",
+      "content": "Improving Transformer Inference Through Optimized Nonlinear Operations With Quantization-Approximation-Based Strategy | IEEE Journals & Magazine | IEEE Xplore Published in:IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems ( Volume: 44, Issue: 4, April 2025)  Image 4: Contact IEEE to Subscribe IEEE Personal Account About IEEE _Xplore_ | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. ### IEEE Account About IEEE _Xplore_ A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.",
+      "score": 0.37572992,
       "raw_content": null
     },
     {
-      "title": "Transformer Models in Natural Language Processing: A ... - Springer",
-      "url": "https://link.springer.com/chapter/10.1007/978-3-031-81308-5_42",
-      "content": "Transformer-based pre-trained language models are advanced machine learning models that understand and produce human language. Chen, A., Yu, Z., Yang, X., Guo, Y., Bian, J., Wu, Y.: Contextualized medication information extraction using Transformer-based deep learning architectures. Devlin, J., Chang, M.-W., Lee, K., Toutanova, K.: BERT: pre-training of deep bidirectional transformers for language understanding (2019). Li, R., Jiang, Z., Wang, L., Lu, X., Zhao, M., Chen, D.: Enhancing Transformer-based language models with commonsense representations for knowledge-driven machine comprehension. Chen, A., Yu, Z., Yang, X., Guo, Y., Bian, J., Wu, Y.: Contextualized medication information extraction using Transformer-based deep learning architectures. Li, R., Jiang, Z., Wang, L., Lu, X., Zhao, M., Chen, D.: Enhancing Transformer-based language models with commonsense representations for knowledge-driven machine comprehension.",
-      "score": 0.32082182,
+      "title": "Self-Improving Transformers Overcome Easy-to-Hard and Length ...",
+      "url": "https://arxiv.org/abs/2502.01612",
+      "content": ">cs> arXiv:2502.01612  arXiv:2502.01612 (cs)  Title:Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges View a PDF of the paper titled Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges, by Nayoung Lee and 4 other authors Cite as:arXiv:2502.01612 [cs.LG] (or arXiv:2502.01612v2 [cs.LG] for this version) View a PDF of the paper titled Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges, by Nayoung Lee and 4 other authors [x] Bibliographic Explorer Toggle  [x] Connected Papers Toggle  [x] Litmaps Toggle  [x] scite.ai Toggle  [x] alphaXiv Toggle  [x] Links to Code Toggle  [x] DagsHub Toggle  [x] GotitPub Toggle  [x] Huggingface Toggle  [x] Links to Code Toggle  [x] ScienceCast Toggle  [x] Replicate Toggle  [x] Spaces Toggle  [x] Spaces Toggle  [x] Core recommender toggle  [x] IArxiv recommender toggle ",
+      "score": 0.27181473,
       "raw_content": null
     },
     {
-      "title": "PDF",
-      "url": "https://link.springer.com/content/pdf/10.1007/s12559-025-10470-w.pdf",
-      "content": "Transformer-Encoder SSRAN [57] 2023 Y \u2212 77.90 BiSLU [58] 2023 Y \u2212 81.50 Transformer-Decoder EN-Llama-2 [59] 2024 Y \u2212 80.60 EN-Mistral [59] 2024 Y \u2212 82.40 Transformer & RNN Uni-MIS [60] 2024 Y \u2212 78.50 MixSNIPS LSTM GL-GIN [55] 2021 N \u2212 95.60 SDJN [56] 2022 N \u2212 96.50 Transformer-Encoder SSRAN [57] 2023 Y \u2212 98.40 BiSLU [58] 2023 Y",
-      "score": 0.068793684,
+      "title": "Optimal Control for Transformer Architectures: Enhancing Generalization ...",
+      "url": "https://arxiv.org/pdf/2505.13499",
+      "content": "The model inserts a given Transformer into a continuous-time architecture and incorporates an optimal transport (OT)-regularization into the training objective, which are motivated from the theoretical analysis using optimal control theory in Section 4. The unregularized OT-Transformer improves the test accuracy to 96.8%, although it uses a much smaller model architecture. The N-ODE Transformers with slight and standard regularization report a test accuracy of 83.6% and 83.9%, respectively, which are not better than the baseline model. The baseline architecture uses a Transformer 33 Table 6: Number of parameters for the Transformer blocks, best and final test accuracies (with standard deviation) across five trials for for the sentiment analysis experiment.",
+      "score": 0.2304349,
       "raw_content": null
     }
   ],
-  "response_time": 1.65
+  "response_time": 2.25
 }
