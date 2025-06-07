@@ -33,7 +33,7 @@ def create_research_gap_agent_task():
         ]),
         expected_output="JSON list of research gaps and improvement suggestions.",
         output_json=ResearchGapOutput,
-        output_file=os.path.join(output_dir, "step_4_research_gaps.json"),
+        output_file=os.path.join(output_dir, "step_3_research_gaps.json"),
         agent=research_gap_agent,
     )
 

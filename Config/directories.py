@@ -1,7 +1,7 @@
 from Config.shared import *
 
 
-output_dir = './PublishMate_agent_ouput/outputs'
+output_dir = './PublishMate_agent_ouput'
 os.makedirs(output_dir, exist_ok=True)
 
 

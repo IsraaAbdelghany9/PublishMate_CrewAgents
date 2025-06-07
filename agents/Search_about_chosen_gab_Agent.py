@@ -33,7 +33,7 @@ def create_research_starting_points_agent_task(chosen_topic, chosen_gap):
         ]),
         expected_output="JSON list of steps with detailed beginner tips.",
         output_json=ResearchGapOutput,
-        output_file=os.path.join(output_dir, "step_research_gap.json"),
+        output_file=os.path.join(output_dir, "step_4_research_starting_points.json"),
         agent=research_starting_points_agent,
     )
 
