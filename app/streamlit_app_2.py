@@ -227,38 +227,43 @@ if research_field:
                 st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
                 st.markdown("---")
 
-                
         st.markdown("### Research Gaps")
 
-        # Get gaps list (strings like "**Topic:** description")
+        # Extract topics and map their gaps
         gaps = research_gaps.get("research_gaps", [])
 
-        topics_clean = []
-        gaps_clean = []
+        topic_to_gaps = {}
 
         if gaps:
             for gap in gaps:
-                # Split by ":**" or ":** " to separate topic and description
                 if ":**" in gap:
                     topic, desc = gap.split(":**", 1)
-                    topic = topic.strip(" *")  # remove extra * and spaces
+                    topic = topic.strip(" *")
                     desc = desc.strip()
-                    topics_clean.append(topic)
-                    gaps_clean.append(desc)
+                    if topic not in topic_to_gaps:
+                        topic_to_gaps[topic] = []
+                    topic_to_gaps[topic].append(desc)
                     st.markdown(f"**{topic}:** {desc}")
                 else:
-                    # fallback: whole string as gap without topic
-                    gaps_clean.append(gap)
+                    # fallback
+                    if "General" not in topic_to_gaps:
+                        topic_to_gaps["General"] = []
+                    topic_to_gaps["General"].append(gap)
                     st.markdown(gap)
         else:
             st.info("No research gaps found.")
 
-        # Topics from trending_topics (if available)
-        topics_list = [t.get("name", "") for t in trending_topics.get("topics", [])]
+        # Topics list from extracted topics
+        topics_list = list(topic_to_gaps.keys())
 
-        # Select boxes with clean topic and gap lists
-        st.selectbox("Which topic interested you more?", options=topics_list, key="chosen_topic")
-        st.selectbox("Which gap do you want to start with?", options=gaps_clean, key="chosen_gap")
+        # Topic selection
+        chosen_topic = st.selectbox("Which topic interested you more?", options=topics_list, key="chosen_topic")
+
+        # Show only gaps related to chosen topic
+        related_gaps = topic_to_gaps.get(chosen_topic, [])
+
+        # Gaps selection
+        chosen_gap = st.selectbox("Which gap do you want to start with?", options=related_gaps, key="chosen_gap")
 
 
         if st.button("Run detailed research tasks"):
