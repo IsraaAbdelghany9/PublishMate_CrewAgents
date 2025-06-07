@@ -62,17 +62,11 @@ st.markdown(
         background-color: #f0f0f0;
     }
 
-    /* Title style: dark red */
+    /* Title style */
     h1 {
-        color: #8B0000; /* dark red */
+        color: #003366;
         text-align: center;
         font-weight: bold;
-    }
-
-    /* Make input and select boxes white background */
-    input[type="text"], .stTextInput > div > input, .stSelectbox > div > div > div {
-        background-color: white !important;
-        color: black !important;
     }
 
     /* Smaller subtitles as list items */
@@ -87,19 +81,15 @@ st.markdown(
         margin-bottom: 6px;
     }
 
-    /* Questions label background dark gray and text color */
+    /* Questions label color */
     label, .stTextInput > label, .stSelectbox > label {
-        background-color: #333333; /* dark gray */
-        color: #ffffff;
+        color: #003366;
         font-weight: 600;
-        padding: 4px 8px;
-        border-radius: 4px;
-        display: inline-block;
     }
 
     /* Separator line */
     .section-separator {
-        border-top: 2px solid #8B0000; /* dark red line */
+        border-top: 2px solid #003366;
         margin: 20px 0;
     }
 
@@ -120,6 +110,7 @@ st.markdown(
 )
 
 # Page title and intro
+# Page title and intro
 st.markdown(
     """
     <style>
@@ -132,12 +123,9 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
 st.markdown("<h1>Welcome to Your Publish Mate 😊</h1>", unsafe_allow_html=True)
 
-intro_prompt = (
-"Every great research journey starts with a good plan. I’m PublishMate, your assistant, dedicated to helping you find the latest trends, identify gaps, and organize your ideas. Let’s achieve your research goals together."
-)
+intro_prompt = ("Every great research journey starts with a good plan. I’m PublishMate, your assistant, dedicated to helping you find the latest trends, identify gaps, and organize your ideas. Let’s achieve your research goals together.")
 
 st.markdown(f"<div class='intro-box'>{intro_prompt}</div>", unsafe_allow_html=True)
 
@@ -149,6 +137,31 @@ if "chosen_topic" not in st.session_state:
 if "chosen_gap" not in st.session_state:
     st.session_state.chosen_gap = ""
 
+
+st.markdown(
+    """
+    <style>
+    label {
+        background-color: #444444 !important;  /* dark gray background */
+        color: white !important;                /* white text */
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    input, select, textarea {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #ccc !important;
+        border-radius: 4px;
+        padding: 5px;
+        width: 100%;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 # User input
 research_field = st.text_input("Enter your research field:")
 
@@ -240,38 +253,29 @@ if research_field:
             st.markdown("### Research Starting Points")
             steps = research_starting_points.get("research_steps", [])
             if steps:
-                st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
-                for idx, step in enumerate(steps, 1):
-                    st.markdown(f"<li><strong>{idx}. {step}</strong></li>", unsafe_allow_html=True)
-                st.markdown("</ul>", unsafe_allow_html=True)
+                for step in steps:
+                    section = step.get("section", "")
+                    tips = step.get("tips", "")
+                    st.markdown(f"**{section}**")
+                    st.markdown(f"{tips}")
+                    st.markdown("<br>", unsafe_allow_html=True)
             else:
                 st.info("No starting points found.")
 
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
-            st.markdown("### Paper Structure and Writing Guide")
-            sections = paper_structure.get("sections", [])
-            if sections:
+            st.markdown("### Paper Structure Guide")
+            if paper_structure.get("paper_structure"):
                 st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
-                for section in sections:
-                    st.markdown(f"<li><strong>{section}</strong></li>", unsafe_allow_html=True)
+                for section in paper_structure.get("paper_structure", []):
+                    st.markdown(f"<li><strong>{section.get('section', 'No Section')}</strong>: {section.get('tips', 'No Tips')}</li>", unsafe_allow_html=True)
                 st.markdown("</ul>", unsafe_allow_html=True)
             else:
                 st.info("No paper structure found.")
 
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Related Work Draft")
-            related_work_text = related_work.get("related_work_text", "")
-            if related_work_text:
-                st.text_area("Related Work", related_work_text, height=200)
-            else:
-                st.info("No related work draft found.")
+            st.write(related_work.get("related_work", "No related work content."))
 
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Paper Draft")
-            draft_text = draft.get("paper_draft_text", "")
-            if draft_text:
-                st.text_area("Paper Draft", draft_text, height=300)
-            else:
-                st.info("No draft found.")
-else:
-    st.info("Please enter your research field to start.")
+            st.write(draft.get("draft", "No draft content."))

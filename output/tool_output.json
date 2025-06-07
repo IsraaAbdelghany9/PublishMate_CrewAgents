@@ -1,5 +1,5 @@
 {
-  "query": "Efficient Training of Large Transformers 2023-2025 arXiv OR IEEE OR Springer OR Elsevier",
+  "query": "Efficient Training Large Transformers  2023-2025 arxiv OR springer OR ieee OR science direct",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
@@ -7,38 +7,38 @@
     {
       "title": "UltraFormer: An Efficient Transformer for FPGAs - IEEE Xplore",
       "url": "https://ieeexplore.ieee.org/document/11008930/",
-      "content": "Transformer-based large language models (LLMs) have exploded in popularity in both industrial and academic settings, seeing rapid progress in model quality over the last few years and unprecedented levels of adoption worldwide. Acceleration of these transformer architectures and their efficient alternatives [1], [2] has surged in relevance to meet the aforementioned efficiency needs. Field",
-      "score": 0.19169092,
-      "raw_content": null
-    },
-    {
-      "title": "IEEE - The world's largest technical professional organization ...",
-      "url": "https://www.ieee.org/",
-      "content": "IEEE - The world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. Organizational Ethics Annual Report History of IEEE Volunteer resources IEEE Corporate Awards Program Financials and Statistics IEEE Future Directions IEEE for Industry (Corporations, Government, Individuals) IEEE Climate Change Humanitarian and Philanthropic Opportunities IEEE and its members inspire a global community to innovate for a better tomorrow through highly cited publications, conferences, technology standards, and professional and educational activities. IEEE is the trusted \u201cvoice\u201d for engineering, computing, and technology information around the globe. Members support IEEE's mission to advance technology for humanity and the profession, while memberships build a platform to introduce careers in technology to students around the world.",
-      "score": 0.118273266,
-      "raw_content": null
-    },
-    {
-      "title": "Home | SpringerLink",
-      "url": "https://link.springer.com/",
-      "content": "Springer Nature Link - Home for all research The journal will publish innovative research on the design, synthesis, and performance evaluation of various photothermal... ### Artificial Intelligence Review Artificial Intelligence Review is a fully open access journal publishing state-of-the-art research in artificial intelligence and cognitive science. ### Discover Sustainability Discover Sustainability is an open access journal publishing research across all fields relevant to sustainability. As part of Springer Nature, Springer Nature Link delivers fast access to the depth and breadth of our online collection of journals, eBooks, reference works and protocols across a vast range of subject disciplines. Springer Nature Link is the reading platform of choice for hundreds of thousands of researchers worldwide. Find out how to publish your research with Springer Nature.",
-      "score": 0.047148798,
-      "raw_content": null
-    },
-    {
-      "title": "PDF",
-      "url": "https://iclr.cc/media/iclr-2025/Slides/29483.pdf",
-      "content": "On the Optimal Memorization Capacity of Transformers",
-      "score": 0.028895615,
+      "content": "UltraFormer: An Efficient Transformer for FPGAs | IEEE Conference Publication | IEEE Xplore Image 1: IEEE Xplore logo - Link to home Publisher: IEEE Image 4: Contact IEEE to Subscribe IEEE Personal Account About IEEE _Xplore_ | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. ### IEEE Account About IEEE _Xplore_ A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.",
+      "score": 0.17912845,
       "raw_content": null
     },
     {
       "title": "ScienceDirect.com | Science, health and medical journals, full text ...",
       "url": "https://www.sciencedirect.com/",
       "content": "ScienceDirect.com | Science, health and medical journals, full text articles and books. Search for peer-reviewed journal articles and book chapters (includingopen access content) Can we halve premature mortality by the year 2050?Explore the science, insights, and solutions that could make this ambition a reality as the research and healthcare communities advance human progress, together. Computer Science Journal of Advanced Research, Volume 37 Explore our wide selection of Life Sciences journal articles and book chapters featuring original research, insightful analysis, current theory and more. Discover our large collection of Social Sciences and Humanities journals and books, highlighting historical context, current developments, theories, applications, trends and more. Journal of Business Research, Volume 104 Cookies are used by this site.",
-      "score": 0.020459222,
+      "score": 0.053290002,
+      "raw_content": null
+    },
+    {
+      "title": "Home | SpringerLink",
+      "url": "https://link.springer.com/",
+      "content": "Springer Nature Link - Home for all research The journal will publish innovative research on the design, synthesis, and performance evaluation of various photothermal... ### Artificial Intelligence Review Artificial Intelligence Review is a fully open access journal publishing state-of-the-art research in artificial intelligence and cognitive science. ### Discover Sustainability Discover Sustainability is an open access journal publishing research across all fields relevant to sustainability. As part of Springer Nature, Springer Nature Link delivers fast access to the depth and breadth of our online collection of journals, eBooks, reference works and protocols across a vast range of subject disciplines. Springer Nature Link is the reading platform of choice for hundreds of thousands of researchers worldwide. Find out how to publish your research with Springer Nature.",
+      "score": 0.04853668,
+      "raw_content": null
+    },
+    {
+      "title": "IEEE Transactions on Power Electronics",
+      "url": "https://www.ieee-pels.org/publications/transactions-on-power-electronics/",
+      "content": "The IEEE Transactions on Power Electronics (TPEL) is a monthly publication where papers are available in Xplore shortly after acceptance. The\u00a0IEEE Transactions on Power Electronics\u00a0(TPEL) covers all issues in the field of power electronics, including conversion, control, applications, conceptual issues, and system integration of electric power using semiconductors and switching devices. Applicants from Academia: 8 or more journal papers in the last 5 years, of which, at least 4 should be in IEEE Transactions on Power Electronics. Applicants from Industry: 2 or more journal papers in the last 10 years, of which, at least 1 should be in IEEE Transactions on Power Electronics. These papers would be more appropriate for the IEEE\u00a0Transactions on Power Systems.",
+      "score": 0.03464829,
+      "raw_content": null
+    },
+    {
+      "title": "PDF",
+      "url": "https://iclr.cc/media/iclr-2025/Slides/29483.pdf",
+      "content": "iclr.cc",
+      "score": 0.017060088,
       "raw_content": null
     }
   ],
-  "response_time": 2.1
+  "response_time": 1.96
 }
