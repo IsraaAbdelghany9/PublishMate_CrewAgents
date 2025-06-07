@@ -1,10 +1,8 @@
 crewai
 agentops
 google-genai
-<<<<<<< HEAD
 streamlit
-=======
->>>>>>> 339a03f70d4b2859bfc943b5534de2ef58839e05
+
 google-ai-generativelanguage==0.4.0
 google-api-core==1.34.0
 google-auth==2.0.0
