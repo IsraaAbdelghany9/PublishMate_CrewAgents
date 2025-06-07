@@ -1,12 +1,13 @@
 import os
 import json
 import sys
+import time
+import streamlit as st
 
 # Set working directory
 os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
 sys.path.append("/home/israa/Desktop/PublishMate_CrewAgents")
 
-import streamlit as st
 from Config.shared import *
 from agents.Trending_Topics_Agent import create_trending_topics_agent_task
 from agents.Recent_Papers_Retrieval_Agent import create_recent_papers_agent_task
@@ -16,7 +17,7 @@ from agents.Paper_Structure_and_Writing_Guide_Agent import create_paper_structur
 from agents.Related_work_draft_Agent import create_related_work_agent_task
 from agents.Paper_draft_Agent import create_draft_writer_agent_task
 
-# File paths
+# Paths to JSON outputs
 trending_topics_path = "PublishMate_agent_ouput/step_1_trending_topics.json"
 recent_papers_path = "PublishMate_agent_ouput/step_2_recent_papers.json"
 research_gaps_path = "PublishMate_agent_ouput/step_3_research_gaps.json"
@@ -24,69 +25,6 @@ research_starting_points_path = "PublishMate_agent_ouput/step_4_research_startin
 paper_structure_path = "PublishMate_agent_ouput/step_5_paper_structure.json"
 related_work_path = "PublishMate_agent_ouput/step_6_related_work.json"
 draft_path = "PublishMate_agent_ouput/step_7_paper_draft.json"
-
-intro_prompt = (
-    "Welcome to PublishMate! I am your research assistant mate here to help you with your academic paper journey.\n"
-    "I will guide you step-by-step to find trending topics, recent papers, summaries, "
-    "research gaps, and help with paper writing. \nLet's get started!\n"
-)
-
-# Styling
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #f5f7fa;
-        color: #333333;
-    }
-    .main-title {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #357ABD;
-        margin-bottom: 15px;
-    }
-    .intro-box {
-        background-color: #eeeeee;
-        padding: 15px 20px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-bottom: 25px;
-    }
-    .section-title {
-        background-color: #357ABD;
-        color: white;
-        padding: 8px 15px;
-        border-radius: 6px;
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-def styled_section_title(text):
-    st.markdown(f'<div class="section-title">{text}</div>', unsafe_allow_html=True)
-
-# Title and Intro
-st.markdown('<div class="main-title">Welcome to Publish Mate 😊</div>', unsafe_allow_html=True)
-st.markdown(f'<div class="intro-box">{intro_prompt.replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
-
-# Session state init
-if "first_task_done" not in st.session_state:
-    st.session_state.first_task_done = False
-if "chosen_topic" not in st.session_state:
-    st.session_state.chosen_topic = ""
-if "chosen_gap" not in st.session_state:
-    st.session_state.chosen_gap = ""
 
 def read_json_file(filepath):
     try:
@@ -101,12 +39,117 @@ def read_json_file(filepath):
         return {}
 
 def run_crew(crew):
-    try:
-        crew.kickoff()
-        st.success("Task completed!")
-    except Exception as e:
-        st.error(f"Error running tasks: {e}")
+    with st.spinner("Running tasks, please wait..."):
+        try:
+            crew.kickoff()
+        except Exception as e:
+            st.error(f"Error running tasks: {e}")
+            return
 
+    progress_bar = st.progress(0)
+    for percent in range(100):
+        time.sleep(0.01)
+        progress_bar.progress(percent + 1)
+
+    st.success("Task completed!")
+
+# Custom styles
+st.markdown(
+    """
+    <style>
+    /* Gray background for entire page */
+    .stApp {
+        background-color: #f0f0f0;
+    }
+
+    /* Title style: dark red */
+    h1 {
+        color: #8B0000; /* dark red */
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Make input and select boxes white background */
+    input[type="text"], .stTextInput > div > input, .stSelectbox > div > div > div {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Smaller subtitles as list items */
+    ul.subtitles-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        color: #222222;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    ul.subtitles-list li {
+        margin-bottom: 6px;
+    }
+
+    /* Questions label background dark gray and text color */
+    label, .stTextInput > label, .stSelectbox > label {
+        background-color: #333333; /* dark gray */
+        color: #ffffff;
+        font-weight: 600;
+        padding: 4px 8px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    /* Separator line */
+    .section-separator {
+        border-top: 2px solid #8B0000; /* dark red line */
+        margin: 20px 0;
+    }
+
+    /* Light gray box for intro */
+    .intro-box {
+        background-color: #d9d9d9;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 25px;
+        white-space: pre-line;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Page title and intro
+st.markdown(
+    """
+    <style>
+    h1 {
+        color: #C04040 !important;  /* medium red */
+        text-align: center;
+        font-weight: bold;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.markdown("<h1>Welcome to Your Publish Mate 😊</h1>", unsafe_allow_html=True)
+
+intro_prompt = (
+"Every great research journey starts with a good plan. I’m PublishMate, your assistant, dedicated to helping you find the latest trends, identify gaps, and organize your ideas. Let’s achieve your research goals together."
+)
+
+st.markdown(f"<div class='intro-box'>{intro_prompt}</div>", unsafe_allow_html=True)
+
+# Session state
+if "first_task_done" not in st.session_state:
+    st.session_state.first_task_done = False
+if "chosen_topic" not in st.session_state:
+    st.session_state.chosen_topic = ""
+if "chosen_gap" not in st.session_state:
+    st.session_state.chosen_gap = ""
+
+# User input
 research_field = st.text_input("Enter your research field:")
 
 if research_field:
@@ -130,28 +173,40 @@ if research_field:
         recent_papers = read_json_file(recent_papers_path)
         research_gaps = read_json_file(research_gaps_path)
 
-        styled_section_title("Trending Topics")
-        for topic in trending_topics.get("topics", []):
-            st.subheader(topic.get("name", "No Name"))
-            st.write(topic.get("description", "No Description"))
+        st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+        st.markdown("### Trending Topics")
+        if trending_topics.get("topics"):
+            st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
+            for topic in trending_topics.get("topics", []):
+                st.markdown(f"<li><strong>{topic.get('name', 'No Name')}</strong>: {topic.get('description', 'No Description')}</li>", unsafe_allow_html=True)
+            st.markdown("</ul>", unsafe_allow_html=True)
+        else:
+            st.info("No trending topics found.")
 
-        styled_section_title("Recent Papers")
+        st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+        st.markdown("### Recent Papers")
         topic_papers = recent_papers.get("topic_papers", {})
         if topic_papers:
             for topic, papers in topic_papers.items():
-                st.subheader(topic)
+                st.markdown(f"**{topic}**")
                 for paper in papers:
-                    st.markdown(f"**Title:** {paper.get('title', 'No Title')}")
-                    st.markdown(f"**Year:** {paper.get('year', 'N/A')}")
-                    st.markdown(f"**URL:** {paper.get('url', 'No URL')}")
-                    st.markdown(f"**Abstract:** {paper.get('abstract', 'No Abstract')}")
-                    st.write("---")
+                    st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
+                    st.markdown(f"  - **Year:** {paper.get('year', 'N/A')}")
+                    st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
+                    st.markdown(f"  - **Abstract:** {paper.get('abstract', 'No Abstract')}")
+                    st.markdown("---")
         else:
             st.info("No papers found, try again.")
 
-        styled_section_title("Research Gaps")
-        for gap in research_gaps.get("research_gaps", []):
-            st.write(f"- {gap}")
+        st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+        st.markdown("### Research Gaps")
+        if research_gaps.get("research_gaps"):
+            st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
+            for gap in research_gaps.get("research_gaps", []):
+                st.markdown(f"<li>{gap}</li>", unsafe_allow_html=True)
+            st.markdown("</ul>", unsafe_allow_html=True)
+        else:
+            st.info("No research gaps found.")
 
         topics_list = [t.get("name", "") for t in trending_topics.get("topics", [])]
         gaps_list = research_gaps.get("research_gaps", [])
@@ -181,18 +236,42 @@ if research_field:
             related_work = read_json_file(related_work_path)
             draft = read_json_file(draft_path)
 
-            styled_section_title("Research Starting Points")
-            for idx, step in enumerate(research_starting_points.get("research_steps", []), 1):
-                st.subheader(f"{idx}. {step.get('section', 'No Section')}")
-                st.write(step.get("tips", "No Tips"))
+            st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+            st.markdown("### Research Starting Points")
+            steps = research_starting_points.get("research_steps", [])
+            if steps:
+                st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
+                for idx, step in enumerate(steps, 1):
+                    st.markdown(f"<li><strong>{idx}. {step}</strong></li>", unsafe_allow_html=True)
+                st.markdown("</ul>", unsafe_allow_html=True)
+            else:
+                st.info("No starting points found.")
 
-            styled_section_title("Paper Structure Guide")
-            for section in paper_structure.get("paper_structure", []):
-                st.subheader(section.get("section", "No Section"))
-                st.write(section.get("tips", "No Tips"))
+            st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+            st.markdown("### Paper Structure and Writing Guide")
+            sections = paper_structure.get("sections", [])
+            if sections:
+                st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
+                for section in sections:
+                    st.markdown(f"<li><strong>{section}</strong></li>", unsafe_allow_html=True)
+                st.markdown("</ul>", unsafe_allow_html=True)
+            else:
+                st.info("No paper structure found.")
 
-            styled_section_title("Related Work Draft")
-            st.write(related_work.get("related_work", "No related work content."))
+            st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+            st.markdown("### Related Work Draft")
+            related_work_text = related_work.get("related_work_text", "")
+            if related_work_text:
+                st.text_area("Related Work", related_work_text, height=200)
+            else:
+                st.info("No related work draft found.")
 
-            styled_section_title("Paper Draft")
-            st.write(draft.get("draft", "No draft content."))
+            st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+            st.markdown("### Paper Draft")
+            draft_text = draft.get("paper_draft_text", "")
+            if draft_text:
+                st.text_area("Paper Draft", draft_text, height=300)
+            else:
+                st.info("No draft found.")
+else:
+    st.info("Please enter your research field to start.")
