@@ -4,6 +4,7 @@ import sys
 import time
 import streamlit as st
 import requests
+import re
 
 # Set working directory
 os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
@@ -28,6 +29,11 @@ related_work_path = "PublishMate_agent_ouput/step_6_related_work.json"
 draft_path = "PublishMate_agent_ouput/step_7_paper_draft.json"
 tool_output = "output/tool_output.json"
 
+
+# Validate Gmail format
+def is_valid_email(email):
+    return re.fullmatch(r'^[A-Za-z0-9._%+-]+@gmail\.com$', email) is not None
+    
 
 def read_json_file(filepath):
     try:
@@ -56,18 +62,17 @@ def run_crew(crew):
 
     st.success("Task completed!")
 
-# Custom styles
 st.markdown(
     """
     <style>
-    /* Gray background for entire page */
+    /* Background for entire page */
     .stApp {
-        background-color: #f0f0f0;
+        background-color: #f9f7f3;  /* very light cyan */
     }
 
     /* Title style */
     h1 {
-        color: #003366;
+        color: #9c6644 !important;  /* warm medium brown */
         text-align: center;
         font-weight: bold;
     }
@@ -76,7 +81,7 @@ st.markdown(
     ul.subtitles-list {
         list-style-type: disc;
         padding-left: 20px;
-        color: #222222;
+        color: #6b5b4b;  /* a darker brown for readability (custom) */
         font-size: 18px;
         font-weight: 600;
     }
@@ -86,46 +91,50 @@ st.markdown(
 
     /* Questions label color */
     label, .stTextInput > label, .stSelectbox > label {
-        color: #003366;
-        font-weight: 600;
+        background-color: #444444 !important;  /* dark gray background */
+        color: white !important;                /* white text */
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-weight: bold;
     }
 
     /* Separator line */
     .section-separator {
-        border-top: 2px solid #003366;
+        border-top: 2px solid #e6beae;  /* light warm beige */
         margin: 20px 0;
     }
 
-    /* Light gray box for intro */
+    /* Intro box */
     .intro-box {
-        background-color: #d9d9d9;
-        padding: 20px;
-        border-radius: 10px;
+        background-color: #f2e9e4;  /* very light beige */
+        padding: 10px;
+        border-radius: 20px;
         text-align: center;
-        font-size: 18px;
-        color: #333333;
+        font-size: 17px;
+        color: #6b5b4b;
         margin-bottom: 25px;
         white-space: pre-line;
     }
+
+    /* Subtitles Text h3 */
+    h3 
+    {
+    color: #9c6644 !important;          /* warm medium brown */
+    font-weight: bold;
+    text-align: center;      /* optional, center align */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Page title and intro
-st.markdown(
-    """
-    <style>
-    h1 {
-        color: #C04040 !important;  /* medium red */
-        text-align: center;
-        font-weight: bold;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-st.markdown("<h1>Welcome to Your Publish Mate 😊</h1>", unsafe_allow_html=True)
+
+st.markdown("<h1>Welcome from Your Publish Mate 😊</h1>", unsafe_allow_html=True)
 
 intro_prompt = ("Every great research journey starts with a good plan. I’m PublishMate, your assistant, dedicated to helping you find the latest trends, identify gaps, and organize your ideas. Let’s achieve your research goals together.")
 
@@ -134,37 +143,13 @@ st.markdown(f"<div class='intro-box'>{intro_prompt}</div>", unsafe_allow_html=Tr
 # Session state
 if "first_task_done" not in st.session_state:
     st.session_state.first_task_done = False
+if "second_task_done" not in st.session_state:
+    st.session_state.second_task_done = False
 if "chosen_topic" not in st.session_state:
     st.session_state.chosen_topic = ""
 if "chosen_gap" not in st.session_state:
     st.session_state.chosen_gap = ""
 
-
-st.markdown(
-    """
-    <style>
-    label {
-        background-color: #444444 !important;  /* dark gray background */
-        color: white !important;                /* white text */
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        display: inline-block;
-        margin-bottom: 5px;
-    }
-    input, select, textarea {
-        background-color: white !important;
-        color: black !important;
-        border: 1px solid #ccc !important;
-        border-radius: 4px;
-        padding: 5px;
-        width: 100%;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-# User input
 research_field = st.text_input("Enter your research field:")
 
 if research_field:
@@ -227,6 +212,8 @@ if research_field:
                 st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
                 st.markdown("---")
 
+#########################################################################################
+
         st.markdown("### Research Gaps")
 
         # Extract topics and map their gaps
@@ -234,8 +221,10 @@ if research_field:
 
         topic_to_gaps = {}
 
+
         if gaps:
             for gap in gaps:
+
                 if ":**" in gap:
                     topic, desc = gap.split(":**", 1)
                     topic = topic.strip(" *")
@@ -264,6 +253,7 @@ if research_field:
 
         # Gaps selection
         chosen_gap = st.selectbox("Which gap do you want to start with?", options=related_gaps, key="chosen_gap")
+
 
 
         if st.button("Run detailed research tasks"):
@@ -320,29 +310,7 @@ if research_field:
             st.write(draft.get("draft", "No draft content."))
 
 #########################################################################################################################
-        import re
-        # Validate Gmail format
-        def is_valid_email(email):
-            return re.fullmatch(r'^[A-Za-z0-9._%+-]+@gmail\.com$', email) is not None
-            
-        # Add custom CSS for dark gray label and white input box
-        st.markdown("""
-            <style>
-            label {
-                background-color: #444 !important;
-                color: white !important;
-                padding: 5px 10px;
-                border-radius: 5px;
-                display: inline-block;
-                margin-bottom: 5px;
-                font-weight: bold;
-            }
-            input, textarea {
-                background-color: white !important;
-                color: black !important;
-            }
-            </style>
-        """, unsafe_allow_html=True)
+
 
         st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
         st.markdown("## 📣 Feedback")
@@ -373,6 +341,4 @@ if research_field:
                     st.success("Thank you! Feedback submitted.")
                 else:
                     st.warning("Failed to submit feedback. Try again.")
-
-
 

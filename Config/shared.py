@@ -16,4 +16,3 @@ from crewai.tools import tool
 import agentops
 
 from tavily import TavilyClient
-import sys

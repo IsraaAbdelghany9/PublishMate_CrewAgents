@@ -1,44 +1,44 @@
 {
-  "query": "Large Transformer training optimization 2023-2025 site:arxiv.org",
+  "query": "Efficient Transformer Training OR Large Model Training OR Model Parallelism published in 2023 OR 2024 OR 2025 site:arxiv.org OR site:ieeexplore.ieee.org OR site:springerlink.com OR site:sciencedirect.com",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "Peri-LN: Revisiting Layer Normalization in the Transformer Architecture",
-      "url": "https://arxiv.org/pdf/2502.02732",
-      "content": "arXiv:2502.02732v2 [cs.LG] 6 Feb 2025. Peri-LN: Revisiting Layer Normalization in the Transformer Architecture ... light an underexplored avenue for stabilizing large-scale Transformer training. While prior work offers encouraging ... scale pre-training scenarios (Zhai et al.,2023;Wortsman et al.,2024;Fishman et al.,2024;Chung et al.,2024).",
-      "score": 0.6864757,
+      "title": "Improving Automatic Parallel Training via Balanced Memory Workload ...",
+      "url": "https://ieeexplore.ieee.org/document/10449463",
+      "content": "Transformer models have emerged as the leading approach for achieving state-of-the-art performance across various application domains, serving as the foundation for advanced large-scale deep learning (DL) models. However, efficiently training these models across multiple GPUs remains a complex challenge due to the abundance of parallelism options. Existing DL systems either require manual",
+      "score": 0.31821015,
       "raw_content": null
     },
     {
-      "title": "A Survey on Ef\ufb01cient Training of Transformers - arXiv.org",
-      "url": "https://arxiv.org/pdf/2302.01107",
-      "content": "This survey provides the first systematic overview of the efficient training of Transformers, covering the recent progress in acceleration arithmetic and hardware, with a focus on the former. We analyze and compare methods that save computation and memory costs for inter-mediate tensors during training, together with techniques on hardware/algorithm co-design. We finally discuss challenges and promising areas for future research. In this survey, we review the generic techniques that boost computation and memory efficiency for training attention-based models, i.e., Transformers, as shown in Figure 1.",
-      "score": 0.35985944,
+      "title": "Communication-Efficient Model Parallelism for Distributed In-Situ ...",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10546617",
+      "content": "Transformer models have shown significant success in a wide range of tasks. Meanwhile, massive resources required by its inference prevent scenarios with resource-constrained devices from in-situ deployment, leaving a high threshold of integrating its advances. Observing that these scenarios, e.g. smart home of edge computing, are usually comprise a rich set of trusted devices with untapped",
+      "score": 0.23291197,
       "raw_content": null
     },
     {
-      "title": "TAGC: Optimizing Gradient Communication in Distributed Transformer Training",
-      "url": "https://arxiv.org/html/2504.05638v1",
-      "content": "Although there are various communication optimization techniques, it is not always possible to integrate them into existing tools for training large neural networks. One widely used tool for optimizing distributed training is NCCL (NVIDIA, 2025 ) , a library that provides efficient collective communication operations for GPU clusters and is",
-      "score": 0.30380458,
+      "title": "A comprehensive survey on applications of transformers for deep ...",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0957417423031688",
+      "content": "The advantages of the Transformer model have inspired deep learning researchers to explore its potential for various tasks in different fields of application (Ren, Li, & Liu, 2023), leading to numerous research papers and the development of Transformer-based models for a range of tasks in the field of artificial intelligence (Reza et al., 2022",
+      "score": 0.13793866,
       "raw_content": null
     },
     {
-      "title": "Galvatron: Automatic Distributed Training for Large Transformer Models",
-      "url": "https://arxiv.org/abs/2504.03662",
-      "content": "Training multi-billion to trillion-parameter language models efficiently on GPU clusters requires leveraging multiple parallelism strategies. We present Galvatron, a novel open-source framework (dubbed 'Optimus-Megatron' in the implementation) that dynamically combines data parallelism, tensor model parallelism, and pipeline parallelism to optimize training throughput. Built atop PyTorch and",
-      "score": 0.27938145,
+      "title": "Joint Dynamic Data and Model Parallelism for Distributed Training of ...",
+      "url": "https://ieeexplore.ieee.org/document/10767392",
+      "content": "Distributed training of deep neural networks (DNNs) suffers from efficiency declines in dynamic heterogeneous environments, due to the resource wastage brought by the straggler problem in data parallelism (DP) and pipeline bubbles in model parallelism (MP). Additionally, the limited resource availability requires a trade-off between training performance and long-term costs, particularly in",
+      "score": 0.10787861,
       "raw_content": null
     },
     {
-      "title": "HybridNorm: Towards Stable and Efficient Transformer Training",
-      "url": "https://arxiv.org/html/2503.04598v1",
-      "content": "Transformers have become the backbone of large language models (LLMs) and a wide range of machine learning applications. These architectures are capable of modeling long-range dependencies through self-attention mechanisms, which have made them the preferred choice for a variety of tasks, including language modeling, machine translation, and image processing (Devlin et al., 2019; Brown et al",
-      "score": 0.22347063,
+      "title": "A comprehensive survey on applications of transformers for deep ...",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0957417423031688",
+      "content": "Transformers are Deep Neural Networks (DNN) that utilize a self-attention mechanism to capture contextual relationships within sequential data. Unlike\u2026",
+      "score": 0.04569639,
       "raw_content": null
     }
   ],
-  "response_time": 2.26
+  "response_time": 2.62
 }
