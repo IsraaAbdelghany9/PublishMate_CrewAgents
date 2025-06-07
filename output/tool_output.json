@@ -1,44 +1,44 @@
 {
-  "query": "Improving Transformer Robustness and Generalization 2023-2025 arxiv ieee springer",
+  "query": "Large Transformer training optimization 2023-2025 site:arxiv.org",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "A Theoretical Framework for OOD Robustness in Transformers using Gevrey ...",
-      "url": "https://arxiv.org/pdf/2504.12991v2",
-      "content": "arXiv:2504.12991v2 [cs.LG] 30 May 2025 A Theoretical Framework for OOD Robustness in Transformers using Gevrey Classes Yu Wang* 1 Fu-Chieh Chang* 1 2 Pei-Yuan Wu1 Abstract We study the robustness of Transformer language models under semantic out-of-distribution (OOD) shifts, where training and test data lie in dis-joint latent spaces.",
-      "score": 0.4757764,
+      "title": "Peri-LN: Revisiting Layer Normalization in the Transformer Architecture",
+      "url": "https://arxiv.org/pdf/2502.02732",
+      "content": "arXiv:2502.02732v2 [cs.LG] 6 Feb 2025. Peri-LN: Revisiting Layer Normalization in the Transformer Architecture ... light an underexplored avenue for stabilizing large-scale Transformer training. While prior work offers encouraging ... scale pre-training scenarios (Zhai et al.,2023;Wortsman et al.,2024;Fishman et al.,2024;Chung et al.,2024).",
+      "score": 0.6864757,
       "raw_content": null
     },
     {
-      "title": "[2311.17400] Improving the Robustness of Transformer-based Large ...",
-      "url": "https://arxiv.org/abs/2311.17400",
-      "content": "arXiv smileybones ## arXiv Is Hiring a DevOps Engineer arXiv Is Hiring a DevOps Engineer arxiv logo arXiv logo Cornell University Logo ### References & Citations ## BibTeX formatted citation BibSonomy logo # Bibliographic and Citation Tools # Recommenders and Search Tools # arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. Have an idea for a project that will add value for arXiv's community? arXiv Operational Status   ",
-      "score": 0.37614232,
+      "title": "A Survey on Ef\ufb01cient Training of Transformers - arXiv.org",
+      "url": "https://arxiv.org/pdf/2302.01107",
+      "content": "This survey provides the first systematic overview of the efficient training of Transformers, covering the recent progress in acceleration arithmetic and hardware, with a focus on the former. We analyze and compare methods that save computation and memory costs for inter-mediate tensors during training, together with techniques on hardware/algorithm co-design. We finally discuss challenges and promising areas for future research. In this survey, we review the generic techniques that boost computation and memory efficiency for training attention-based models, i.e., Transformers, as shown in Figure 1.",
+      "score": 0.35985944,
       "raw_content": null
     },
     {
-      "title": "Improving Transformer Inference Through Optimized ... - IEEE Xplore",
-      "url": "https://ieeexplore.ieee.org/document/10738457",
-      "content": "Improving Transformer Inference Through Optimized Nonlinear Operations With Quantization-Approximation-Based Strategy | IEEE Journals & Magazine | IEEE Xplore Published in:IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems ( Volume: 44, Issue: 4, April 2025)  Image 4: Contact IEEE to Subscribe IEEE Personal Account About IEEE _Xplore_ | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. ### IEEE Account About IEEE _Xplore_ A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.",
-      "score": 0.37572992,
+      "title": "TAGC: Optimizing Gradient Communication in Distributed Transformer Training",
+      "url": "https://arxiv.org/html/2504.05638v1",
+      "content": "Although there are various communication optimization techniques, it is not always possible to integrate them into existing tools for training large neural networks. One widely used tool for optimizing distributed training is NCCL (NVIDIA, 2025 ) , a library that provides efficient collective communication operations for GPU clusters and is",
+      "score": 0.30380458,
       "raw_content": null
     },
     {
-      "title": "Self-Improving Transformers Overcome Easy-to-Hard and Length ...",
-      "url": "https://arxiv.org/abs/2502.01612",
-      "content": ">cs> arXiv:2502.01612  arXiv:2502.01612 (cs)  Title:Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges View a PDF of the paper titled Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges, by Nayoung Lee and 4 other authors Cite as:arXiv:2502.01612 [cs.LG] (or arXiv:2502.01612v2 [cs.LG] for this version) View a PDF of the paper titled Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges, by Nayoung Lee and 4 other authors [x] Bibliographic Explorer Toggle  [x] Connected Papers Toggle  [x] Litmaps Toggle  [x] scite.ai Toggle  [x] alphaXiv Toggle  [x] Links to Code Toggle  [x] DagsHub Toggle  [x] GotitPub Toggle  [x] Huggingface Toggle  [x] Links to Code Toggle  [x] ScienceCast Toggle  [x] Replicate Toggle  [x] Spaces Toggle  [x] Spaces Toggle  [x] Core recommender toggle  [x] IArxiv recommender toggle ",
-      "score": 0.27181473,
+      "title": "Galvatron: Automatic Distributed Training for Large Transformer Models",
+      "url": "https://arxiv.org/abs/2504.03662",
+      "content": "Training multi-billion to trillion-parameter language models efficiently on GPU clusters requires leveraging multiple parallelism strategies. We present Galvatron, a novel open-source framework (dubbed 'Optimus-Megatron' in the implementation) that dynamically combines data parallelism, tensor model parallelism, and pipeline parallelism to optimize training throughput. Built atop PyTorch and",
+      "score": 0.27938145,
       "raw_content": null
     },
     {
-      "title": "Optimal Control for Transformer Architectures: Enhancing Generalization ...",
-      "url": "https://arxiv.org/pdf/2505.13499",
-      "content": "The model inserts a given Transformer into a continuous-time architecture and incorporates an optimal transport (OT)-regularization into the training objective, which are motivated from the theoretical analysis using optimal control theory in Section 4. The unregularized OT-Transformer improves the test accuracy to 96.8%, although it uses a much smaller model architecture. The N-ODE Transformers with slight and standard regularization report a test accuracy of 83.6% and 83.9%, respectively, which are not better than the baseline model. The baseline architecture uses a Transformer 33 Table 6: Number of parameters for the Transformer blocks, best and final test accuracies (with standard deviation) across five trials for for the sentiment analysis experiment.",
-      "score": 0.2304349,
+      "title": "HybridNorm: Towards Stable and Efficient Transformer Training",
+      "url": "https://arxiv.org/html/2503.04598v1",
+      "content": "Transformers have become the backbone of large language models (LLMs) and a wide range of machine learning applications. These architectures are capable of modeling long-range dependencies through self-attention mechanisms, which have made them the preferred choice for a variety of tasks, including language modeling, machine translation, and image processing (Devlin et al., 2019; Brown et al",
+      "score": 0.22347063,
       "raw_content": null
     }
   ],
-  "response_time": 2.25
+  "response_time": 2.26
 }

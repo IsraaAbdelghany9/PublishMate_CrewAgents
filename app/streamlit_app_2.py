@@ -227,22 +227,39 @@ if research_field:
                 st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
                 st.markdown("---")
 
-
-        st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+                
         st.markdown("### Research Gaps")
-        if research_gaps.get("research_gaps"):
-            st.markdown("<ul class='subtitles-list'>", unsafe_allow_html=True)
-            for gap in research_gaps.get("research_gaps", []):
-                st.markdown(f"<li>{gap}</li>", unsafe_allow_html=True)
-            st.markdown("</ul>", unsafe_allow_html=True)
+
+        # Get gaps list (strings like "**Topic:** description")
+        gaps = research_gaps.get("research_gaps", [])
+
+        topics_clean = []
+        gaps_clean = []
+
+        if gaps:
+            for gap in gaps:
+                # Split by ":**" or ":** " to separate topic and description
+                if ":**" in gap:
+                    topic, desc = gap.split(":**", 1)
+                    topic = topic.strip(" *")  # remove extra * and spaces
+                    desc = desc.strip()
+                    topics_clean.append(topic)
+                    gaps_clean.append(desc)
+                    st.markdown(f"**{topic}:** {desc}")
+                else:
+                    # fallback: whole string as gap without topic
+                    gaps_clean.append(gap)
+                    st.markdown(gap)
         else:
             st.info("No research gaps found.")
 
+        # Topics from trending_topics (if available)
         topics_list = [t.get("name", "") for t in trending_topics.get("topics", [])]
-        gaps_list = research_gaps.get("research_gaps", [])
 
+        # Select boxes with clean topic and gap lists
         st.selectbox("Which topic interested you more?", options=topics_list, key="chosen_topic")
-        st.selectbox("Which gap do you want to start with?", options=gaps_list, key="chosen_gap")
+        st.selectbox("Which gap do you want to start with?", options=gaps_clean, key="chosen_gap")
+
 
         if st.button("Run detailed research tasks"):
             chosen_topic = st.session_state.get("chosen_topic", "")
