@@ -3,6 +3,7 @@ import json
 import sys
 import time
 import streamlit as st
+import requests
 
 # Set working directory
 os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
@@ -279,3 +280,52 @@ if research_field:
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Paper Draft")
             st.write(draft.get("draft", "No draft content."))
+
+#########################################################################################################################
+
+        # Add custom CSS for dark gray label and white input box
+        st.markdown("""
+            <style>
+            label {
+                background-color: #444 !important;
+                color: white !important;
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: inline-block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            input, textarea {
+                background-color: white !important;
+                color: black !important;
+            }
+            </style>
+        """, unsafe_allow_html=True)
+
+        st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+        st.markdown("## 📣 Feedback")
+
+        name = st.text_input("Name")
+        gmail = st.text_input("Gmail")
+        feedback = st.text_area("What do you think about PublishMate?")
+
+        if st.button("Submit Feedback"):
+            if feedback.strip() == "":
+                st.warning("Please write some feedback before submitting.")
+            else:
+                form_url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiaaP9YJemZqlKky8z109JcR7E34O6iatezaKPa1aHbbUAqg/formResponse"
+                form_data = {
+                    "entry.1318153724": name,       
+                    "entry.1280693106": gmail,
+                    "entry.1166678387": feedback,  
+                }
+
+                response = requests.post(form_url, data=form_data)
+                
+                if response.status_code == 200:
+                    st.success("Thank you! Feedback submitted.")
+                else:
+                    st.warning("Failed to submit feedback. Try again.")
+
+
+
