@@ -28,8 +28,12 @@ crew = Crew(
            research_gap_task,
            ],
 
-    verbose=True,
+    verbose=False,
 )
 
 # Run the crew
-crew.kickoff()
+# crew.kickoff()
+
+results = crew.kickoff
+
+## Read the output from the files

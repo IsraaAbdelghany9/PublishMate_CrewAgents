@@ -18,7 +18,7 @@ def create_trending_topics_agent_task(user_input: str):
         ]),
         backstory="Designed to guide users by providing the most relevant and current trending research topics.",
         llm=basic_llm,
-        verbose=True,
+        verbose=False,
     )
 
     task = Task(

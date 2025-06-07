@@ -19,7 +19,7 @@ def create_research_gap_agent_task():
         ]),
         backstory="Helps users find novel contributions by highlighting unexplored areas and providing ideas.",
         llm=basic_llm,
-        verbose=True,
+        verbose=False,
     )
 
     research_gap_task = Task(

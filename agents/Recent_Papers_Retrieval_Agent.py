@@ -27,7 +27,7 @@ def create_recent_papers_agent_task():
         ]),
         backstory="Helps beginner researchers quickly discover and review the latest relevant publications across the trending topics with the URLs that are valid and some info.",
         llm=basic_llm,
-        verbose=True,
+        verbose=False,
     )
 
     recent_papers_task = Task(

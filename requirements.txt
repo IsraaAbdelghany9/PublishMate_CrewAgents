@@ -2,6 +2,7 @@ crewai
 agentops
 google-genai
 streamlit
+sqlite3
 
 # google-ai-generativelanguage==0.4.0
 # google-api-core==1.34.0
