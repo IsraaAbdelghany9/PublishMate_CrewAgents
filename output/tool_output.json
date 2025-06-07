@@ -1,44 +1,44 @@
 {
-  "query": "Efficient Transformer Training OR Large Model Training OR Model Parallelism published in 2023 OR 2024 OR 2025 site:arxiv.org OR site:ieeexplore.ieee.org OR site:springerlink.com OR site:sciencedirect.com",
+  "query": "Multimodal RAG papers 2023-2025",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "Improving Automatic Parallel Training via Balanced Memory Workload ...",
-      "url": "https://ieeexplore.ieee.org/document/10449463",
-      "content": "Transformer models have emerged as the leading approach for achieving state-of-the-art performance across various application domains, serving as the foundation for advanced large-scale deep learning (DL) models. However, efficiently training these models across multiple GPUs remains a complex challenge due to the abundance of parallelism options. Existing DL systems either require manual",
-      "score": 0.31821015,
+      "title": "Paper Collections | llm-lab-org/Multimodal-RAG-Survey | DeepWiki",
+      "url": "https://deepwiki.com/llm-lab-org/Multimodal-RAG-Survey/6-paper-collections",
+      "content": "Sources: README.md 425-432 README.md 434-473 Publication Trends and Statistics. The paper collections reflect the rapid growth and evolution of Multimodal RAG research. The repository includes papers from 2021 to 2025, with a significant increase in publications observed in 2023-2024, particularly in areas like video-centric retrieval and multimodal fusion mechanisms.",
+      "score": 0.85097736,
       "raw_content": null
     },
     {
-      "title": "Communication-Efficient Model Parallelism for Distributed In-Situ ...",
-      "url": "https://ieeexplore.ieee.org/abstract/document/10546617",
-      "content": "Transformer models have shown significant success in a wide range of tasks. Meanwhile, massive resources required by its inference prevent scenarios with resource-constrained devices from in-situ deployment, leaving a high threshold of integrating its advances. Observing that these scenarios, e.g. smart home of edge computing, are usually comprise a rich set of trusted devices with untapped",
-      "score": 0.23291197,
+      "title": "ICLR Poster MMed-RAG: Versatile Multimodal RAG System for Medical ...",
+      "url": "https://iclr.cc/virtual/2025/poster/28145",
+      "content": "Select Year: (2025) 2025 2024 2023 2022 2021 2020 2019 2018 2017 ... In this paper, we propose a versatile multimodal RAG system, MMed-RAG, designed to enhance the factuality of Med-LVLMs. Our approach introduces a domain-aware retrieval mechanism, an adaptive retrieved contexts selection, and a provable RAG-based preference fine-tuning",
+      "score": 0.79369855,
       "raw_content": null
     },
     {
-      "title": "A comprehensive survey on applications of transformers for deep ...",
-      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0957417423031688",
-      "content": "The advantages of the Transformer model have inspired deep learning researchers to explore its potential for various tasks in different fields of application (Ren, Li, & Liu, 2023), leading to numerous research papers and the development of Transformer-based models for a range of tasks in the field of artificial intelligence (Reza et al., 2022",
-      "score": 0.13793866,
+      "title": "[2504.12330] HM-RAG: Hierarchical Multi-Agent Multimodal Retrieval ...",
+      "url": "https://arxiv.org/abs/2504.12330",
+      "content": "View a PDF of the paper titled HM-RAG: Hierarchical Multi-Agent Multimodal Retrieval Augmented Generation, by Pei Liu and 6 other authors We present HM-RAG, a novel Hierarchical Multi-agent Multimodal RAG framework that pioneers collaborative intelligence for dynamic knowledge synthesis across structured, unstructured, and graph-based data. View a PDF of the paper titled HM-RAG: Hierarchical Multi-Agent Multimodal Retrieval Augmented Generation, by Pei Liu and 6 other authors Bibliographic Explorer Toggle Connected Papers Toggle Litmaps Toggle alphaXiv Toggle Links to Code Toggle DagsHub Toggle GotitPub Toggle Links to Code Toggle ScienceCast Toggle Replicate Toggle",
+      "score": 0.48718598,
       "raw_content": null
     },
     {
-      "title": "Joint Dynamic Data and Model Parallelism for Distributed Training of ...",
-      "url": "https://ieeexplore.ieee.org/document/10767392",
-      "content": "Distributed training of deep neural networks (DNNs) suffers from efficiency declines in dynamic heterogeneous environments, due to the resource wastage brought by the straggler problem in data parallelism (DP) and pipeline bubbles in model parallelism (MP). Additionally, the limited resource availability requires a trade-off between training performance and long-term costs, particularly in",
-      "score": 0.10787861,
+      "title": "Multimodal RAG Survey",
+      "url": "https://multimodalrag.github.io/",
+      "content": "Multimodal RAG extends traditional Retrieval-Augmented Generation (RAG) frameworks by incorporating diverse data types, such as text, images, audio, and video, from external knowledge sources. Recent advances in multimodal learning have led to the development of Multimodal RAG, incorporating multiple modalities such as text, images, audio, and video to enhance the generated outputs. The typical Multimodal RAG pipeline involves several key stages, alongside crucial innovations in training and robustness, to effectively integrate diverse data types for enhanced generation: Enhancing Reasoning, Alignment, and Retrieval: Developing better compositional reasoning across modalities, improving entity-aware retrieval, mitigating retrieval biases (e.g., position sensitivity, redundancy), exploring knowledge graphs, and creating truly unified embedding spaces for direct multimodal search. title={Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation}, ",
+      "score": 0.46584973,
       "raw_content": null
     },
     {
-      "title": "A comprehensive survey on applications of transformers for deep ...",
-      "url": "https://www.sciencedirect.com/science/article/pii/S0957417423031688",
-      "content": "Transformers are Deep Neural Networks (DNN) that utilize a self-attention mechanism to capture contextual relationships within sequential data. Unlike\u2026",
-      "score": 0.04569639,
+      "title": "GitHub - HuggingAGI/AwesomeRAGPapers: A curated collection of ...",
+      "url": "https://github.com/HuggingAGI/AwesomeRAGPapers",
+      "content": "A curated collection of influential surveys and papers on Retrieval-Augmented Generation (RAG), covering frameworks, evaluations, multi-modal extensions, and domain-specific applications. - GitHub - HuggingAGI/AwesomeRAGPapers: A curated collection of influential surveys and papers on Retrieval-Augmented Generation (RAG), covering frameworks, evaluations, multi-modal extensions, and domain",
+      "score": 0.4387136,
       "raw_content": null
     }
   ],
-  "response_time": 2.62
+  "response_time": 2.07
 }

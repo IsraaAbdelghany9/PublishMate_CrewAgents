@@ -184,6 +184,8 @@ if research_field:
         else:
             st.info("No trending topics found.")
 
+#######################################################################################################################################
+
         st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
         st.markdown("### Recent Papers")
 
@@ -204,13 +206,14 @@ if research_field:
                         st.markdown("---")
         else:
             output_tool_papers = tool_output_json.get("results", [])
-            st.info("All Papers found:")
+            st.info("All Related work found:")
 
             for paper in output_tool_papers:
-                st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
-                st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
-                st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
-                st.markdown("---")
+                if paper.get('score') > 0.3:
+                    st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
+                    st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
+                    st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
+                    st.markdown("---")
 
 #########################################################################################
 
