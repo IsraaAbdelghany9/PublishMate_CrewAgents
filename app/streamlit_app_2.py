@@ -282,7 +282,11 @@ if research_field:
             st.write(draft.get("draft", "No draft content."))
 
 #########################################################################################################################
-
+        import re
+        # Validate Gmail format
+        def is_valid_email(email):
+            return re.fullmatch(r'^[A-Za-z0-9._%+-]+@gmail\.com$', email) is not None
+            
         # Add custom CSS for dark gray label and white input box
         st.markdown("""
             <style>
@@ -309,9 +313,14 @@ if research_field:
         gmail = st.text_input("Gmail")
         feedback = st.text_area("What do you think about PublishMate?")
 
+
         if st.button("Submit Feedback"):
             if feedback.strip() == "":
                 st.warning("Please write some feedback before submitting.")
+
+            elif not is_valid_email(gmail):
+                st.warning("Please write valid mail before submitting.")
+
             else:
                 form_url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiaaP9YJemZqlKky8z109JcR7E34O6iatezaKPa1aHbbUAqg/formResponse"
                 form_data = {
