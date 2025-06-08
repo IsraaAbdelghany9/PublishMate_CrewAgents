@@ -1,5 +1,5 @@
 pysqlite3-binary
-crewai
+crewai==0.126.0
 streamlit
 python-dotenv
 pydantic
