@@ -1,20 +1,7 @@
-crewai
-agentops
-google-genai
-streamlit
-# python-3.11
-requests
-
-# crewai
-# agentops
-# google-genai
-# streamlit
-# # sqlite3
-# python-3.11
-# re
-# requests
-# # google-ai-generativelanguage==0.4.0
-# # google-api-core==1.34.0
-# # google-auth==2.0.0
-# # google-generativeai==0.3.2
-# # googleapis-common-protos==1.59.1
+crewai==0.28.8
+chromadb==0.4.24
+agentops==0.4.14
+google-genai==0.5.0
+streamlit==1.35.0
+requests==2.31.0
+pypdfium2==4.30.1
