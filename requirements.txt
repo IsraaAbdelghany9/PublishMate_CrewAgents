@@ -2,7 +2,7 @@ crewai
 agentops
 google-genai
 streamlit
-python-3.11
+# python-3.11
 requests
 
 # crewai
