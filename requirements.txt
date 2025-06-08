@@ -2,12 +2,20 @@ crewai
 agentops
 google-genai
 streamlit
-# sqlite3
 python-3.11
 re
 requests
-# google-ai-generativelanguage==0.4.0
-# google-api-core==1.34.0
-# google-auth==2.0.0
-# google-generativeai==0.3.2
-# googleapis-common-protos==1.59.1
+
+# crewai
+# agentops
+# google-genai
+# streamlit
+# # sqlite3
+# python-3.11
+# re
+# requests
+# # google-ai-generativelanguage==0.4.0
+# # google-api-core==1.34.0
+# # google-auth==2.0.0
+# # google-generativeai==0.3.2
+# # googleapis-common-protos==1.59.1
