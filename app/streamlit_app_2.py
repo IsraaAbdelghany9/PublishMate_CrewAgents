@@ -319,9 +319,13 @@ if research_field:
 
 #################################################################################################################################
 
+            formatted_draft = draft.get("draft", "No draft content.").replace("##", "####")
+            formatted_draft = re.sub(r'(\*\*)?[1-9]\.\s+', '**', formatted_draft)
+
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Paper Draft")
-            st.write(draft.get("draft", "No draft content."))
+            # st.write(draft.get("draft", "No draft content."))
+            st.markdown(formatted_draft, unsafe_allow_html=True)
 
 #########################################################################################################################
 
