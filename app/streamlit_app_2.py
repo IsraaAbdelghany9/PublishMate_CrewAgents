@@ -10,7 +10,7 @@ import re
 # os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
 os.chdir(os.path.dirname(__file__))  # change to app folder
 
-sys.path.append("/home/israa/Desktop/PublishMate_CrewAgents")
+# sys.path.append("/home/israa/Desktop/PublishMate_CrewAgents")
 
 from Config.shared import *
 from agents.Trending_Topics_Agent import create_trending_topics_agent_task
