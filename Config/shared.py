@@ -16,3 +16,5 @@ from crewai.tools import tool
 import agentops
 
 from tavily import TavilyClient
+
+import pysqlite3 as sqlite3
