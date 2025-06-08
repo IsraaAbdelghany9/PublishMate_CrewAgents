@@ -3,4 +3,5 @@ streamlit
 python-dotenv
 pydantic
 agentops
-tavily-python
+requests
+langchain-community
