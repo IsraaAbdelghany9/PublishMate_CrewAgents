@@ -7,5 +7,5 @@ pypdfium2==4.30.1
 sentence-transformers==2.7.0
 streamlit==1.35.0
 numpy==1.26.4
-protobuf<5,>=3.20.0  # Add this line to keep protobuf in a compatible range
+protobuf>=3.20.0,<5  # Keep protobuf in compatible range
 onnxruntime==1.14.1  # Downgrade to avoid protobuf 5+ dependency conflict
