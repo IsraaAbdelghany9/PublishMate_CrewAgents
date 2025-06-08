@@ -209,7 +209,7 @@ if research_field:
             st.info("All Related work found:")
 
             for paper in output_tool_papers:
-                if paper.get('score') > 0.3:
+                if paper.get('score') > 0.1:
                     st.markdown(f"- **Title:** {paper.get('title', 'No Title')}")
                     st.markdown(f"  - **URL:** {paper.get('url', 'No URL')}")
                     st.markdown(f"  - **Content:** {paper.get('content', 'No Content')}")
@@ -258,28 +258,33 @@ if research_field:
         chosen_gap = st.selectbox("Which gap do you want to start with?", options=related_gaps, key="chosen_gap")
 
 
+        if not st.session_state.second_task_done:
+            if st.button("Run detailed research tasks"):
+                chosen_topic = st.session_state.get("chosen_topic", "")
+                chosen_gap = st.session_state.get("chosen_gap", "")
 
-        if st.button("Run detailed research tasks"):
-            chosen_topic = st.session_state.get("chosen_topic", "")
-            chosen_gap = st.session_state.get("chosen_gap", "")
+                research_starting_points_agent, research_starting_points_task = create_research_starting_points_agent_task(chosen_topic, chosen_gap)
+                paper_structure_agent, paper_structure_task = create_paper_structure_agent_task()
+                related_work_agent, related_work_task = create_related_work_agent_task(chosen_topic, chosen_gap)
+                draft_writer_agent, draft_writer_task = create_draft_writer_agent_task(chosen_topic, chosen_gap)
 
-            research_starting_points_agent, research_starting_points_task = create_research_starting_points_agent_task(chosen_topic, chosen_gap)
-            paper_structure_agent, paper_structure_task = create_paper_structure_agent_task()
-            related_work_agent, related_work_task = create_related_work_agent_task(chosen_topic, chosen_gap)
-            draft_writer_agent, draft_writer_task = create_draft_writer_agent_task(chosen_topic, chosen_gap)
+                crew2 = Crew(
+                    agents=[research_starting_points_agent, paper_structure_agent, related_work_agent, draft_writer_agent],
+                    tasks=[research_starting_points_task, paper_structure_task, related_work_task, draft_writer_task],
+                    verbose=True,
+                )
 
-            crew2 = Crew(
-                agents=[research_starting_points_agent, paper_structure_agent, related_work_agent, draft_writer_agent],
-                tasks=[research_starting_points_task, paper_structure_task, related_work_task, draft_writer_task],
-                verbose=True,
-            )
+                run_crew(crew2)
+                st.session_state.second_task_done = True
 
-            run_crew(crew2)
+        if st.session_state.second_task_done:
 
             research_starting_points = read_json_file(research_starting_points_path)
             paper_structure = read_json_file(paper_structure_path)
             related_work = read_json_file(related_work_path)
             draft = read_json_file(draft_path)
+
+#################################################################################################################################
 
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Research Starting Points")
@@ -294,6 +299,8 @@ if research_field:
             else:
                 st.info("No starting points found.")
 
+#################################################################################################################################
+
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Paper Structure Guide")
             if paper_structure.get("paper_structure"):
@@ -304,9 +311,13 @@ if research_field:
             else:
                 st.info("No paper structure found.")
 
+#################################################################################################################################
+
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Related Work Draft")
             st.write(related_work.get("related_work", "No related work content."))
+
+#################################################################################################################################
 
             st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
             st.markdown("### Paper Draft")
@@ -315,33 +326,33 @@ if research_field:
 #########################################################################################################################
 
 
-        st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
-        st.markdown("## 📣 Feedback")
+            st.markdown("<hr class='section-separator'>", unsafe_allow_html=True)
+            st.markdown("## 📣 Feedback")
 
-        name = st.text_input("Name")
-        gmail = st.text_input("Gmail")
-        feedback = st.text_area("What do you think about PublishMate?")
+            name = st.text_input("Name")
+            gmail = st.text_input("Gmail")
+            feedback = st.text_area("What do you think about PublishMate?")
 
 
-        if st.button("Submit Feedback"):
-            if feedback.strip() == "":
-                st.warning("Please write some feedback before submitting.")
+            if st.button("Submit Feedback"):
+                if feedback.strip() == "":
+                    st.warning("Please write some feedback before submitting.")
 
-            elif not is_valid_email(gmail):
-                st.warning("Please write valid mail before submitting.")
+                elif not is_valid_email(gmail):
+                    st.warning("Please write valid mail before submitting.")
 
-            else:
-                form_url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiaaP9YJemZqlKky8z109JcR7E34O6iatezaKPa1aHbbUAqg/formResponse"
-                form_data = {
-                    "entry.1318153724": name,       
-                    "entry.1280693106": gmail,
-                    "entry.1166678387": feedback,  
-                }
-
-                response = requests.post(form_url, data=form_data)
-                
-                if response.status_code == 200:
-                    st.success("Thank you! Feedback submitted.")
                 else:
-                    st.warning("Failed to submit feedback. Try again.")
+                    form_url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdiaaP9YJemZqlKky8z109JcR7E34O6iatezaKPa1aHbbUAqg/formResponse"
+                    form_data = {
+                        "entry.1318153724": name,       
+                        "entry.1280693106": gmail,
+                        "entry.1166678387": feedback,  
+                    }
+
+                    response = requests.post(form_url, data=form_data)
+                    
+                    if response.status_code == 200:
+                        st.success("Thank you! Feedback submitted.")
+                    else:
+                        st.warning("Failed to submit feedback. Try again.")
 

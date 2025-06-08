@@ -1,44 +1,44 @@
 {
-  "query": "Multimodal RAG papers 2023-2025",
+  "query": "Interpretability and Explainability of Transformers published in 2023 OR 2024 OR 2025 in IEEE, Springer, Elsevier, arXiv",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "Paper Collections | llm-lab-org/Multimodal-RAG-Survey | DeepWiki",
-      "url": "https://deepwiki.com/llm-lab-org/Multimodal-RAG-Survey/6-paper-collections",
-      "content": "Sources: README.md 425-432 README.md 434-473 Publication Trends and Statistics. The paper collections reflect the rapid growth and evolution of Multimodal RAG research. The repository includes papers from 2021 to 2025, with a significant increase in publications observed in 2023-2024, particularly in areas like video-centric retrieval and multimodal fusion mechanisms.",
-      "score": 0.85097736,
+      "title": "Enforcing Interpretability in Time Series Transformers: A Concept ...",
+      "url": "https://arxiv.org/abs/2410.06070",
+      "content": "There has been a recent push of research on Transformer-based models for long-term time series forecasting, even though they are inherently difficult to interpret and explain. While there is a large body of work on interpretability methods for various domains and architectures, the interpretability of Transformer-based forecasting models remains largely unexplored. To address this gap, we",
+      "score": 0.31738445,
       "raw_content": null
     },
     {
-      "title": "ICLR Poster MMed-RAG: Versatile Multimodal RAG System for Medical ...",
-      "url": "https://iclr.cc/virtual/2025/poster/28145",
-      "content": "Select Year: (2025) 2025 2024 2023 2022 2021 2020 2019 2018 2017 ... In this paper, we propose a versatile multimodal RAG system, MMed-RAG, designed to enhance the factuality of Med-LVLMs. Our approach introduces a domain-aware retrieval mechanism, an adaptive retrieved contexts selection, and a provable RAG-based preference fine-tuning",
-      "score": 0.79369855,
+      "title": "[2304.10557] An Introduction to Transformers - arXiv.org",
+      "url": "https://arxiv.org/abs/2304.10557",
+      "content": ">cs> arXiv:2304.10557  arXiv:2304.10557 (cs)  View a PDF of the paper titled An Introduction to Transformers, by Richard E. Subjects:Machine Learning (cs.LG); Artificial Intelligence (cs.AI) Cite as:arXiv:2304.10557 [cs.LG] (or arXiv:2304.10557v5 [cs.LG] for this version) From: Richard Turner [view email]  View a PDF of the paper titled An Introduction to Transformers, by Richard E. cs [x] Bibliographic Explorer Toggle  [x] Connected Papers Toggle  [x] Litmaps Toggle  [x] scite.ai Toggle  [x] alphaXiv Toggle  [x] Links to Code Toggle  [x] DagsHub Toggle  [x] GotitPub Toggle  [x] Huggingface Toggle  [x] Links to Code Toggle  [x] ScienceCast Toggle  [x] Replicate Toggle  [x] Spaces Toggle  [x] Spaces Toggle  [x] Link to Influence Flower  [x] Core recommender toggle  [x] IArxiv recommender toggle  Learn more about arXivLabs.",
+      "score": 0.18103175,
       "raw_content": null
     },
     {
-      "title": "[2504.12330] HM-RAG: Hierarchical Multi-Agent Multimodal Retrieval ...",
-      "url": "https://arxiv.org/abs/2504.12330",
-      "content": "View a PDF of the paper titled HM-RAG: Hierarchical Multi-Agent Multimodal Retrieval Augmented Generation, by Pei Liu and 6 other authors We present HM-RAG, a novel Hierarchical Multi-agent Multimodal RAG framework that pioneers collaborative intelligence for dynamic knowledge synthesis across structured, unstructured, and graph-based data. View a PDF of the paper titled HM-RAG: Hierarchical Multi-Agent Multimodal Retrieval Augmented Generation, by Pei Liu and 6 other authors Bibliographic Explorer Toggle Connected Papers Toggle Litmaps Toggle alphaXiv Toggle Links to Code Toggle DagsHub Toggle GotitPub Toggle Links to Code Toggle ScienceCast Toggle Replicate Toggle",
-      "score": 0.48718598,
+      "title": "[2407.02646] A Practical Review of Mechanistic Interpretability for ...",
+      "url": "https://arxiv.org/abs/2407.02646",
+      "content": "Mechanistic interpretability (MI) is an emerging sub-field of interpretability that seeks to understand a neural network model by reverse-engineering its internal computations. Recently, MI has garnered significant attention for interpreting transformer-based language models (LMs), resulting in many novel insights yet introducing new challenges. However, there has not been work that",
+      "score": 0.15614378,
       "raw_content": null
     },
     {
-      "title": "Multimodal RAG Survey",
-      "url": "https://multimodalrag.github.io/",
-      "content": "Multimodal RAG extends traditional Retrieval-Augmented Generation (RAG) frameworks by incorporating diverse data types, such as text, images, audio, and video, from external knowledge sources. Recent advances in multimodal learning have led to the development of Multimodal RAG, incorporating multiple modalities such as text, images, audio, and video to enhance the generated outputs. The typical Multimodal RAG pipeline involves several key stages, alongside crucial innovations in training and robustness, to effectively integrate diverse data types for enhanced generation: Enhancing Reasoning, Alignment, and Retrieval: Developing better compositional reasoning across modalities, improving entity-aware retrieval, mitigating retrieval biases (e.g., position sensitivity, redundancy), exploring knowledge graphs, and creating truly unified embedding spaces for direct multimodal search. title={Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation}, ",
-      "score": 0.46584973,
+      "title": "Title: A Tale of Two Imperatives: Privacy and Explainability - arXiv.org",
+      "url": "https://arxiv.org/abs/2412.20798",
+      "content": "arXivLabs: experimental projects with community collaborators. arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.",
+      "score": 0.08933553,
       "raw_content": null
     },
     {
-      "title": "GitHub - HuggingAGI/AwesomeRAGPapers: A curated collection of ...",
-      "url": "https://github.com/HuggingAGI/AwesomeRAGPapers",
-      "content": "A curated collection of influential surveys and papers on Retrieval-Augmented Generation (RAG), covering frameworks, evaluations, multi-modal extensions, and domain-specific applications. - GitHub - HuggingAGI/AwesomeRAGPapers: A curated collection of influential surveys and papers on Retrieval-Augmented Generation (RAG), covering frameworks, evaluations, multi-modal extensions, and domain",
-      "score": 0.4387136,
+      "title": "SAMformer: Unlocking the Potential of Transformers in Time Series ...",
+      "url": "https://arxiv.org/abs/2402.10198",
+      "content": "Transformer-based architectures achieved breakthrough performance in natural language processing and computer vision, yet they remain inferior to simpler linear baselines in multivariate long-term forecasting. To better understand this phenomenon, we start by studying a toy linear forecasting problem for which we show that transformers are incapable of converging to their true solution despite",
+      "score": 0.05382461,
       "raw_content": null
     }
   ],
-  "response_time": 2.07
+  "response_time": 2.72
 }
