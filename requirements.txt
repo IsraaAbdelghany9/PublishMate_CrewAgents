@@ -1,11 +1,22 @@
-crewai==0.126.0
-chromadb==0.5.23
-opentelemetry-sdk==1.33.1
-opentelemetry-api==1.33.1
-opentelemetry-exporter-otlp-proto-grpc==1.33.1
-pypdfium2==4.30.1
-sentence-transformers==2.7.0
+# Core Application Dependencies
+crewai==0.28.8
 streamlit==1.35.0
-numpy==1.26.4
-protobuf>=3.20.0,<5  # Keep protobuf in compatible range
-onnxruntime==1.14.1  # Downgrade to avoid protobuf 5+ dependency conflict
+
+# Database/Vector Store
+chromadb==0.4.24
+
+# Document Processing
+pypdfium2==4.30.1
+
+# Machine Learning
+sentence-transformers==2.2.2
+numpy==1.24.4
+scipy==1.10.1
+scikit-learn==1.2.2
+
+# Protobuf and Serialization
+protobuf==3.20.3
+
+# Runtime Utilities
+typing-extensions==4.5.0
+tqdm==4.65.0
