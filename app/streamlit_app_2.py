@@ -8,9 +8,10 @@ import re
 
 # Set working directory
 # os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
-os.chdir(os.path.dirname(__file__))  # change to app folder
-
 # sys.path.append("/home/israa/Desktop/PublishMate_CrewAgents")
+
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
 
 from Config.shared import *
 from agents.Trending_Topics_Agent import create_trending_topics_agent_task
