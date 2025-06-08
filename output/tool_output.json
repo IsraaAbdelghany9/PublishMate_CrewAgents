@@ -1,44 +1,44 @@
 {
-  "query": "Improving Transformer Robustness and Generalization 2023-2025 arxiv ieee springer",
+  "query": "Efficient Training of Large Transformers 2023-2025 arxiv ieee springer",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "Optimal Control for Transformer Architectures: Enhancing Generalization ...",
-      "url": "https://arxiv.org/abs/2505.13499",
-      "content": ">cs> arXiv:2505.13499  arXiv:2505.13499 (cs)  View a PDF of the paper titled Optimal Control for Transformer Architectures: Enhancing Generalization, Robustness and Efficiency, by Kelvin Kan and 5 other authors Subjects:Machine Learning (cs.LG); Artificial Intelligence (cs.AI); Optimization and Control (math.OC) View a PDF of the paper titled Optimal Control for Transformer Architectures: Enhancing Generalization, Robustness and Efficiency, by Kelvin Kan and 5 other authors [x] Bibliographic Explorer Toggle  [x] Connected Papers Toggle  [x] Litmaps Toggle  [x] scite.ai Toggle  [x] alphaXiv Toggle  [x] Links to Code Toggle  [x] DagsHub Toggle  [x] GotitPub Toggle  [x] Huggingface Toggle  [x] Links to Code Toggle  [x] ScienceCast Toggle  [x] Replicate Toggle  [x] Spaces Toggle  [x] Spaces Toggle  [x] Core recommender toggle  [x] IArxiv recommender toggle ",
-      "score": 0.5342973,
+      "title": "[2302.01107] A Survey on Efficient Training of Transformers - ar5iv",
+      "url": "https://ar5iv.labs.arxiv.org/html/2302.01107",
+      "content": "In this survey, we have reviewed several important factors that improve the training of Transformers: 1) appropriate initialization and optimization paradigms that can accelerate the convergence rate with fewer training iterations, resulting in lower computational costs; 2) higher data efficiency by sampling informative training samples towards more efficient neural scaling laws of test error with respect to dataset size; 3) memory-efficient techniques to meet the memory requirements for training large Transformers, which requires jointly optimizing PE utilization, memory and communication footprints across accelerators, using parallelism, low-precision arithmetic, checkpointing and offloading strategies, etc; 4) hardware and algorithm co-design to maximize the training scalability on hardware platforms.",
+      "score": 0.528899,
       "raw_content": null
     },
     {
-      "title": "[2311.17400] Improving the Robustness of Transformer-based Large ...",
-      "url": "https://arxiv.org/abs/2311.17400",
-      "content": "arXiv smileybones ## arXiv Is Hiring a DevOps Engineer arXiv Is Hiring a DevOps Engineer arxiv logo arXiv logo Cornell University Logo ### References & Citations ## BibTeX formatted citation BibSonomy logo # Bibliographic and Citation Tools # Recommenders and Search Tools # arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. Have an idea for a project that will add value for arXiv's community? arXiv Operational Status   ",
-      "score": 0.37614232,
+      "title": "[2302.01107] A Survey on Efficient Training of Transformers - arXiv.org",
+      "url": "https://arxiv.org/abs/2302.01107",
+      "content": "> cs > arXiv:2302.01107 arXiv:2302.01107 (cs) View a PDF of the paper titled A Survey on Efficient Training of Transformers, by Bohan Zhuang and 5 other authors Comments:IJCAI 2023 survey trackSubjects:Machine Learning (cs.LG); Artificial Intelligence (cs.AI); Computer Vision and Pattern Recognition (cs.CV)Cite as:arXiv:2302.01107 [cs.LG]\u00a0(or arXiv:2302.01107v3 [cs.LG] for this version)\u00a0https://doi.org/10.48550/arXiv.2302.01107Focus to learn morearXiv-issued DOI via DataCite View a PDF of the paper titled A Survey on Efficient Training of Transformers, by Bohan Zhuang and 5 other authors cs Bibliographic Explorer Toggle Connected Papers Toggle Litmaps Toggle scite.ai Toggle alphaXiv Toggle Links to Code Toggle DagsHub Toggle GotitPub Toggle Huggingface Toggle Links to Code Toggle ScienceCast Toggle Replicate Toggle Spaces Toggle Spaces Toggle Core recommender toggle IArxiv recommender toggle",
+      "score": 0.52627033,
       "raw_content": null
     },
     {
-      "title": "Improving Transformer Inference Through Optimized ... - IEEE Xplore",
-      "url": "https://ieeexplore.ieee.org/document/10738457",
-      "content": "Improving Transformer Inference Through Optimized Nonlinear Operations With Quantization-Approximation-Based Strategy | IEEE Journals & Magazine | IEEE Xplore Published in:IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems ( Volume: 44, Issue: 4, April 2025)  Image 4: Contact IEEE to Subscribe IEEE Personal Account About IEEE _Xplore_ | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. ### IEEE Account About IEEE _Xplore_ A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.",
-      "score": 0.37579864,
+      "title": "A Survey on Ef\ufb01cient Training of Transformers - arXiv.org",
+      "url": "https://arxiv.org/pdf/2302.01107",
+      "content": "This survey provides the first systematic overview of the efficient training of Transformers, covering the recent progress in acceleration arithmetic and hardware, with a focus on the former. We analyze and compare methods that save computation and memory costs for inter-mediate tensors during training, together with techniques on hardware/algorithm co-design. We finally discuss challenges and promising areas for future research. In this survey, we review the generic techniques that boost computation and memory efficiency for training attention-based models, i.e., Transformers, as shown in Figure 1.",
+      "score": 0.46453777,
       "raw_content": null
     },
     {
-      "title": "Self-Improving Transformers Overcome Easy-to-Hard and Length ...",
-      "url": "https://arxiv.org/abs/2502.01612",
-      "content": ">cs> arXiv:2502.01612  arXiv:2502.01612 (cs)  Title:Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges View a PDF of the paper titled Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges, by Nayoung Lee and 4 other authors Cite as:arXiv:2502.01612 [cs.LG] (or arXiv:2502.01612v2 [cs.LG] for this version) View a PDF of the paper titled Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges, by Nayoung Lee and 4 other authors [x] Bibliographic Explorer Toggle  [x] Connected Papers Toggle  [x] Litmaps Toggle  [x] scite.ai Toggle  [x] alphaXiv Toggle  [x] Links to Code Toggle  [x] DagsHub Toggle  [x] GotitPub Toggle  [x] Huggingface Toggle  [x] Links to Code Toggle  [x] ScienceCast Toggle  [x] Replicate Toggle  [x] Spaces Toggle  [x] Spaces Toggle  [x] Core recommender toggle  [x] IArxiv recommender toggle ",
-      "score": 0.27119908,
+      "title": "An Efficient Training Accelerator for Transformers With ... - IEEE Xplore",
+      "url": "https://ieeexplore.ieee.org/document/10251161",
+      "content": "An Efficient Training Accelerator for Transformers With Hardware-Algorithm Co-Optimization | IEEE Journals & Magazine | IEEE Xplore *   [](https://www.ieee.org/profile/public/createwebaccount/showCreateAccount.html?ShowMGAMarkeatbilityOptIn=true&sourceCode=xplore&car=IEEE-Xplore&autoSignin=Y&signinurl=https%3A%2F%2Fieeexplore.ieee.org%2FXplore%2Flogin.jsp%3Furl%3D%2FXplore%2Fhome.jsp%26reason%3Dauthenticate&url=https://ieeexplore.ieee.org/document/10251161 \"Create Account\") *   [Create Account](https://www.ieee.org/profile/public/createwebaccount/showCreateAccount.html?ShowMGAMarkeatbilityOptIn=true&sourceCode=xplore&car=IEEE-Xplore&autoSignin=Y&signinurl=https%3A%2F%2Fieeexplore.ieee.org%2FXplore%2Flogin.jsp%3Furl%3D%2FXplore%2Fhome.jsp%26reason%3Dauthenticate&url=https://ieeexplore.ieee.org/document/10251161 \"Create Account\") Transformers have achieved significant success in deep learning, and training Transformers efficiently on resource-constrained platforms has been attracting continuous at...Show More Transformers have achieved significant success in deep learning, and training Transformers efficiently on resource-constrained platforms has been attracting continuous attention for domain adaptions and privacy concerns. To address these issues, we propose an Efficient Training Accelerator for TRansformers (TRETA) through a hardware-algorithm co-optimization strategy. About IEEE Xplore | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy",
+      "score": 0.32463187,
       "raw_content": null
     },
     {
-      "title": "Optimal Control for Transformer Architectures: Enhancing Generalization ...",
-      "url": "https://arxiv.org/pdf/2505.13499",
-      "content": "The model inserts a given Transformer into a continuous-time architecture and incorporates an optimal transport (OT)-regularization into the training objective, which are motivated from the theoretical analysis using optimal control theory in Section 4. The unregularized OT-Transformer improves the test accuracy to 96.8%, although it uses a much smaller model architecture. The N-ODE Transformers with slight and standard regularization report a test accuracy of 83.6% and 83.9%, respectively, which are not better than the baseline model. The baseline architecture uses a Transformer 33 Table 6: Number of parameters for the Transformer blocks, best and final test accuracies (with standard deviation) across five trials for for the sentiment analysis experiment.",
-      "score": 0.23035698,
+      "title": "[2304.03589] On Efficient Training of Large-Scale Deep Learning Models ...",
+      "url": "https://arxiv.org/abs/2304.03589",
+      "content": "arXiv smileybones ## arXiv Is Hiring a DevOps Engineer arXiv Is Hiring a DevOps Engineer arxiv logo arXiv logo Cornell University Logo ### References & Citations ## BibTeX formatted citation # Bibliographic and Citation Tools # Recommenders and Search Tools # arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs. arXiv Operational Status   ",
+      "score": 0.19060381,
       "raw_content": null
     }
   ],
-  "response_time": 1.7
+  "response_time": 1.54
 }
