@@ -7,7 +7,9 @@ import requests
 import re
 
 # Set working directory
-os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
+# os.chdir("/home/israa/Desktop/PublishMate_CrewAgents")
+os.chdir(os.path.dirname(__file__))  # change to app folder
+
 sys.path.append("/home/israa/Desktop/PublishMate_CrewAgents")
 
 from Config.shared import *
