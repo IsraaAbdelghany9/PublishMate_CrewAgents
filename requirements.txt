@@ -1,8 +1,9 @@
-pysqlite3-binary
 crewai
 
-python-dotenv
 pydantic
+pysqlite3-binary
+python-dotenv
+
 agentops
 requests
 
