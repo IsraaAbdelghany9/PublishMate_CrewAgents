@@ -1,44 +1,44 @@
 {
-  "query": "Efficient Training of Large Transformers 2023-2025 arxiv ieee springer",
+  "query": "Transformer Applications beyond NLP 2023-2025 arxiv ieee springer",
   "follow_up_questions": null,
   "answer": null,
   "images": [],
   "results": [
     {
-      "title": "[2302.01107] A Survey on Efficient Training of Transformers - ar5iv",
-      "url": "https://ar5iv.labs.arxiv.org/html/2302.01107",
-      "content": "In this survey, we have reviewed several important factors that improve the training of Transformers: 1) appropriate initialization and optimization paradigms that can accelerate the convergence rate with fewer training iterations, resulting in lower computational costs; 2) higher data efficiency by sampling informative training samples towards more efficient neural scaling laws of test error with respect to dataset size; 3) memory-efficient techniques to meet the memory requirements for training large Transformers, which requires jointly optimizing PE utilization, memory and communication footprints across accelerators, using parallelism, low-precision arithmetic, checkpointing and offloading strategies, etc; 4) hardware and algorithm co-design to maximize the training scalability on hardware platforms.",
-      "score": 0.528899,
+      "title": "Transformers Beyond NLP: Expanding Horizons in Machine Learning - SSRN",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5110547",
+      "content": "Transformers Beyond NLP: Expanding Horizons in Machine Learning by Srikanth Kamatala, Anil Kumar Jonnalagadda, Prudhvi Naayini :: SSRN Top Papers Top Papers Kamatala, Srikanth and Jonnalagadda, Anil Kumar and Naayini, Prudhvi, Transformers Beyond NLP: Expanding Horizons in Machine Learning (January 21, 2025). We use cookies to help provide and enhance our service and tailor content. To learn more, visit Cookie Settings. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. #### Functional Cookies - [x] Functional Cookies  If you do not allow these cookies then some or all of these services may not function properly. These cookies may be set through our site by our advertising partners.",
+      "score": 0.4431913,
       "raw_content": null
     },
     {
-      "title": "[2302.01107] A Survey on Efficient Training of Transformers - arXiv.org",
-      "url": "https://arxiv.org/abs/2302.01107",
-      "content": "> cs > arXiv:2302.01107 arXiv:2302.01107 (cs) View a PDF of the paper titled A Survey on Efficient Training of Transformers, by Bohan Zhuang and 5 other authors Comments:IJCAI 2023 survey trackSubjects:Machine Learning (cs.LG); Artificial Intelligence (cs.AI); Computer Vision and Pattern Recognition (cs.CV)Cite as:arXiv:2302.01107 [cs.LG]\u00a0(or arXiv:2302.01107v3 [cs.LG] for this version)\u00a0https://doi.org/10.48550/arXiv.2302.01107Focus to learn morearXiv-issued DOI via DataCite View a PDF of the paper titled A Survey on Efficient Training of Transformers, by Bohan Zhuang and 5 other authors cs Bibliographic Explorer Toggle Connected Papers Toggle Litmaps Toggle scite.ai Toggle alphaXiv Toggle Links to Code Toggle DagsHub Toggle GotitPub Toggle Huggingface Toggle Links to Code Toggle ScienceCast Toggle Replicate Toggle Spaces Toggle Spaces Toggle Core recommender toggle IArxiv recommender toggle",
-      "score": 0.52627033,
+      "title": "Advancements in Natural Language Processing: Exploring Transformer ...",
+      "url": "https://arxiv.org/abs/2503.20227",
+      "content": "[2503.20227] Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding Title:Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding View a PDF of the paper titled Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding, by Tianhao Wu and 1 other authors Comments:This paper has been accepted by the 5th International Conference on Artificial Intelligence and Industrial Technology Applications (AIITA 2025)Subjects:Computation and Language (cs.CL); Artificial Intelligence (cs.AI)Cite as:arXiv:2503.20227 [cs.CL]\u00a0(or arXiv:2503.20227v1 [cs.CL] for this version)\u00a0https://doi.org/10.48550/arXiv.2503.20227Focus to learn morearXiv-issued DOI via DataCite (pending registration) View a PDF of the paper titled Advancements in Natural Language Processing: Exploring Transformer-Based Architectures for Text Understanding, by Tianhao Wu and 1 other authors Bibliographic Explorer Toggle Connected Papers Toggle Links to Code Toggle Links to Code Toggle",
+      "score": 0.42090955,
       "raw_content": null
     },
     {
-      "title": "A Survey on Ef\ufb01cient Training of Transformers - arXiv.org",
-      "url": "https://arxiv.org/pdf/2302.01107",
-      "content": "This survey provides the first systematic overview of the efficient training of Transformers, covering the recent progress in acceleration arithmetic and hardware, with a focus on the former. We analyze and compare methods that save computation and memory costs for inter-mediate tensors during training, together with techniques on hardware/algorithm co-design. We finally discuss challenges and promising areas for future research. In this survey, we review the generic techniques that boost computation and memory efficiency for training attention-based models, i.e., Transformers, as shown in Figure 1.",
-      "score": 0.46453777,
+      "title": "A Comprehensive Survey on Applications of Transformers for Deep ...",
+      "url": "https://arxiv.org/abs/2306.07303",
+      "content": "[2306.07303] A Comprehensive Survey on Applications of Transformers for Deep Learning Tasks >cs> arXiv:2306.07303  arXiv:2306.07303 (cs)  View a PDF of the paper titled A Comprehensive Survey on Applications of Transformers for Deep Learning Tasks, by Saidul Islam and 6 other authors View a PDF of the paper titled A Comprehensive Survey on Applications of Transformers for Deep Learning Tasks, by Saidul Islam and 6 other authors [x] Bibliographic Explorer Toggle  [x] Connected Papers Toggle  [x] Litmaps Toggle  [x] scite.ai Toggle  [x] alphaXiv Toggle  [x] Links to Code Toggle  [x] DagsHub Toggle  [x] GotitPub Toggle  [x] Huggingface Toggle  [x] Links to Code Toggle  [x] ScienceCast Toggle  [x] Replicate Toggle  [x] Spaces Toggle  [x] Spaces Toggle  [x] Core recommender toggle  [x] IArxiv recommender toggle ",
+      "score": 0.32649738,
       "raw_content": null
     },
     {
-      "title": "An Efficient Training Accelerator for Transformers With ... - IEEE Xplore",
-      "url": "https://ieeexplore.ieee.org/document/10251161",
-      "content": "An Efficient Training Accelerator for Transformers With Hardware-Algorithm Co-Optimization | IEEE Journals & Magazine | IEEE Xplore *   [](https://www.ieee.org/profile/public/createwebaccount/showCreateAccount.html?ShowMGAMarkeatbilityOptIn=true&sourceCode=xplore&car=IEEE-Xplore&autoSignin=Y&signinurl=https%3A%2F%2Fieeexplore.ieee.org%2FXplore%2Flogin.jsp%3Furl%3D%2FXplore%2Fhome.jsp%26reason%3Dauthenticate&url=https://ieeexplore.ieee.org/document/10251161 \"Create Account\") *   [Create Account](https://www.ieee.org/profile/public/createwebaccount/showCreateAccount.html?ShowMGAMarkeatbilityOptIn=true&sourceCode=xplore&car=IEEE-Xplore&autoSignin=Y&signinurl=https%3A%2F%2Fieeexplore.ieee.org%2FXplore%2Flogin.jsp%3Furl%3D%2FXplore%2Fhome.jsp%26reason%3Dauthenticate&url=https://ieeexplore.ieee.org/document/10251161 \"Create Account\") Transformers have achieved significant success in deep learning, and training Transformers efficiently on resource-constrained platforms has been attracting continuous at...Show More Transformers have achieved significant success in deep learning, and training Transformers efficiently on resource-constrained platforms has been attracting continuous attention for domain adaptions and privacy concerns. To address these issues, we propose an Efficient Training Accelerator for TRansformers (TRETA) through a hardware-algorithm co-optimization strategy. About IEEE Xplore | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy",
-      "score": 0.32463187,
+      "title": "Transformer Models in Natural Language Processing: A ... - Springer",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-81308-5_42",
+      "content": "Transformer-based pre-trained language models are advanced machine learning models that understand and produce human language. Chen, A., Yu, Z., Yang, X., Guo, Y., Bian, J., Wu, Y.: Contextualized medication information extraction using Transformer-based deep learning architectures. Devlin, J., Chang, M.-W., Lee, K., Toutanova, K.: BERT: pre-training of deep bidirectional transformers for language understanding (2019). Li, R., Jiang, Z., Wang, L., Lu, X., Zhao, M., Chen, D.: Enhancing Transformer-based language models with commonsense representations for knowledge-driven machine comprehension. Chen, A., Yu, Z., Yang, X., Guo, Y., Bian, J., Wu, Y.: Contextualized medication information extraction using Transformer-based deep learning architectures. Li, R., Jiang, Z., Wang, L., Lu, X., Zhao, M., Chen, D.: Enhancing Transformer-based language models with commonsense representations for knowledge-driven machine comprehension.",
+      "score": 0.32104528,
       "raw_content": null
     },
     {
-      "title": "[2304.03589] On Efficient Training of Large-Scale Deep Learning Models ...",
-      "url": "https://arxiv.org/abs/2304.03589",
-      "content": "arXiv smileybones ## arXiv Is Hiring a DevOps Engineer arXiv Is Hiring a DevOps Engineer arxiv logo arXiv logo Cornell University Logo ### References & Citations ## BibTeX formatted citation # Bibliographic and Citation Tools # Recommenders and Search Tools # arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs. arXiv Operational Status   ",
-      "score": 0.19060381,
+      "title": "Advancements in Natural Language Processing: Exploring Transformer ...",
+      "url": "https://arxiv.org/pdf/2503.20227",
+      "content": "This paper explores the advancements in transformer models, such as BERT and GPT, focusing on their superior performance in text understanding tasks compared to traditional methods like recurrent neural networks (RNNs) [1]. BERT Text Understanding Bidirectional Context GLUE >80% Accuracy T5 Question Answering Near-Human Performance SQuAD F1 >90% CA-BERT Multi-Turn Chat Enhanced Context Awareness Superior Context Classification GPT-3 Text Generation Scalability (175B Parameters) High Coherence in Generation TABLE I. Models like BERT and GPT have demonstrated remarkable capabilities in capturing contextual nuances, handling long-range dependencies, and adapting to a wide range of tasks, as evidenced by their superior performance on benchmarks such as GLUE (with accuracy exceeding 80%) and SQuAD (with F1 scores above 90%).",
+      "score": 0.13401501,
       "raw_content": null
     }
   ],
-  "response_time": 2.12
+  "response_time": 1.62
 }
