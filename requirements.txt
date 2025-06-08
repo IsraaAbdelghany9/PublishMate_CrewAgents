@@ -6,3 +6,4 @@ agentops
 requests
 langchain-community
 pysqlite3-binary
+tavily-python
