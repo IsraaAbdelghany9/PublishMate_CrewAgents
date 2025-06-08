@@ -1,4 +1,3 @@
-pysqlite3-binary
 crewai==0.126.0
 streamlit
 python-dotenv
@@ -6,3 +5,4 @@ pydantic
 agentops
 requests
 langchain-community
+pysqlite3-binary
