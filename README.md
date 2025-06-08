@@ -1,109 +1,159 @@
-# PublishMate Crew Agents
+# 📚 PublishMate — Your Smart Research Assistant
 
-Welcome to **PublishMate** 😊 — your AI-powered research assistant for academic paper writing! This project leverages multi-agent collaboration to guide researchers, especially beginners, through the entire academic paper workflow: from discovering trending topics to drafting a full paper.
+PublishMate is an AI-powered academic assistant that guides you through the research process — from identifying trending topics to drafting your research paper.
+
+[🔗 Live Demo](https://publishmatecrew.streamlit.app/)
+
+
+## 🎥 Demo
+
+A full walkthrough demo of **PublishMate** is available on LinkedIn.  
+📺 [Watch the demo here](https://www.linkedin.com/your-demo-link)
+
 
 ---
 
 ## 🚀 Features
 
-- **Trending Topics Discovery:** Find the latest hot topics in your research field.
-- **Recent Papers Retrieval:** Get recent, reputable papers (with abstracts and links) for each trending topic.
-- **Research Gap Analysis:** Identify gaps and suggestions for future research based on recent literature.
-- **Research Starting Points:** Break down a chosen research gap into actionable, beginner-friendly steps.
-- **Paper Structure Guide:** Generate a tailored academic paper outline with writing tips.
-- **Related Work Drafting:** Compose a comprehensive related work section using real paper summaries.
-- **Full Paper Drafting:** Automatically generate a full academic paper draft (Intro, Method, etc.) based on your chosen topic and gap.
-- **(Optional) Paper Summarization:** Summarize papers into clear, concise paragraphs.
-- **AgentOps Integration:** Monitor and analyze agent performance.
+- **Multi-agent architecture powered by CrewAI**
+- **Streamlit interface for interactivity**
+- **Topic discovery and research gap analysis**
+- **Recent paper retrieval**
+- **Paper structure guidance**
+- **Related work drafting**
+- **Final paper drafting**
+- **User feedback submission**
+
+---
+
+## 👥 Crew Design
+
+The system is divided into **two CrewAI crews** for flexibility and user-centric experience:
+
+### 🧠 Crew 1 – Exploration Phase
+- **Trending Topics Agent**: Detects hot topics in your research field.
+- **Recent Papers Agent**: Fetches recent publications.
+- **Research Gap Agent**: Identifies gaps in current literature.
+
+### ✍️ Crew 2 – Drafting Phase
+- **Starting Points Agent**: Suggests steps to begin research.
+- **Paper Structure Agent**: Outlines paper format with section tips.
+- **Related Work Agent**: Generates related work content.
+- **Paper Draft Agent**: Creates a complete draft from insights.
+
+> ✨ The split allows users to select a **preferred gap** before initiating the second phase — providing control and relevance to their writing journey.
 
 ---
 
 ## 🗂️ Project Structure
 
-```
+```bash
 PublishMate_CrewAgents/
+├── agents/                          # CrewAI agents
+│   ├── Paper_draft_Agent.py
+│   ├── Paper_Structure_and_Writing_Guide_Agent.py
+│   ├── Recent_Papers_Retrieval_Agent.py
+│   ├── Related_work_draft_Agent.py
+│   ├── Research_Gap_and_Suggestion_Agent.py
+│   ├── Search_about_chosen_gab_Agent.py
+│   └── Trending_Topics_Agent.py
+│
+├── app/                             # Streamlit app entry
+│   └── streamlit_app_2.py
+│
+├── Config/                          # Shared configs
+│   ├── env.py
+│   ├── llm.py
+│   └── shared.py
+│
 ├── Notebooks/
-│   └── Project.ipynb      # Main Jupyter notebook (run this!)
-├── .env                   # Your API keys (not included)
-└── README.md              # This file
+│   └── Project.ipynb                # Jupyter notebook for testing
+│
+├── PublishMate_agent_ouput/        # Agent outputs as JSON
+│   ├── step_1_trending_topics.json
+│   ├── step_2_recent_papers.json
+│   ├── step_3_research_gaps.json
+│   ├── step_4_research_starting_points.json
+│   ├── step_5_paper_structure.json
+│   ├── step_6_related_work.json
+│   └── step_7_paper_draft.json
+│
+├── Tools/
+│   └── tavily_client.py            # External tool integration
+│
+├── requirements.txt
+├── packages.txt
+├── runtime.txt
+└── README.md
 ```
 
 ---
 
-## 🛠️ Setup & Requirements
 
-1. **Clone the repository** and navigate to the project folder.
-2. **Install dependencies** (run in a notebook cell or terminal):
+## 💻 Local Development
 
-   ```bash
-   pip install -U "crewai[tools,agentops]" python-dotenv gcloud google-genai tavily
-   ```
+To run the app locally:
 
-3. **Set up your `.env` file** with the following keys:
+```bash
+git clone https://github.com/IsraaAbdelghany9/PublishMate_CrewAgents.git
+cd PublishMate_CrewAgents
+pip install -r requirements.txt
+streamlit run app/streamlit_app_2.py
+```
+---
 
-   ```
-   AGENTOPS_API_KEY=your_agentops_key
-   GEMINI_API_KEY=your_gemini_key
-   TAVILY_API_KEY=your_tavily_key
-   ```
+## ☁️ Streamlit Cloud Deployment
 
-4. **Run `Project.ipynb`** in Jupyter or VS Code.
+The app is live and publicly available:  
+🌐 [**Launch PublishMate**](https://publishmatecrew.streamlit.app/)
+
+To deploy it yourself on **Streamlit Cloud**, ensure you include the following setup files.
+
+---
+## 📓 Notebook First Approach
+
+The included `Project.ipynb` Jupyter notebook allows quick testing of agents and logic before full integration.  
+This approach is ideal for early experimentation and debugging during development.
+
+🧪 Additionally, it was added to offer beginners — or anyone excited about the project — an easy and intuitive way to explore the code and understand the process.
+--- 
+## 💬 Feedback Integration
+
+PublishMate includes a feedback submission system to collect user input after generating research drafts.  
+This can easily be extended to send responses to a database or Google Form for deeper analysis or follow-up.
 
 ---
 
-## 🧑‍💻 How It Works
+## 📜 License
 
-1. **Start the notebook** and follow the prompts.
-2. **Input your research field** — the agents will:
-   - Find trending topics.
-   - Retrieve recent papers for each topic.
-   - Analyze research gaps.
-3. **Choose a topic and gap** you want to explore.
-4. **Get step-by-step research guidance, paper structure, related work, and a full draft.**
-5. **(Optional)**: Use the summarization agent for concise paper summaries.
+Licensed under the **Apache 2.0 License**.  
+See the [LICENSE](./LICENSE) file for full terms.
 
 ---
 
-## 🤖 Agents Overview
+## 🙌 Credits
 
-- **Trending Topics Agent:** Finds hot topics in your field.
-- **Recent Papers Agent:** Retrieves recent, reputable papers.
-- **Research Gap Agent:** Identifies research gaps and suggestions.
-- **Research Starting Points Agent:** Breaks down a gap into actionable steps.
-- **Paper Structure Agent:** Outlines your paper and gives writing tips.
-- **Related Work Agent:** Drafts the related work section.
-- **Draft Writer Agent:** Generates a full academic paper draft.
-- **(Optional) Paper Summarization Agent:** Summarizes papers.
+Developed by **Israa Abdelghany**
+
+Special thanks to:
+
+- **CrewAI** – Orchestrating multi-agent systems  
+- **Tavily** – Research API integration  
+- **Streamlit** – Simplifying UI deployment  
+- **AgentOps** – Monitoring and debugging agents
+---
+## 🤝 Contributions
+
+Feel free to **fork**, ⭐ **star**, and submit **pull requests**.  
+Ideas, suggestions, and bug reports are always welcome and appreciated!
 
 ---
 
-## 📂 Output
+## 🧠 Final Thoughts
 
-All outputs (JSON files, drafts, etc.) are saved in the `PublishMate_agent_ouput` directory.
-
----
-
-## 💡 Further Improvements
-
-- Feedback system (like/dislike).
-- Option to summarize using the whole paper.
-- More advanced agent collaboration and monitoring.
+**PublishMate** demonstrates the potential of **collaborative AI agents** in the academic space.  
+From topic exploration to full paper generation, it helps researchers **write smarter, not harder**.
 
 ---
 
-## 📝 License
-
-This project is for educational and research purposes.
-
----
-
-## 🙏 Acknowledgements
-
-- [CrewAI](https://github.com/joaomdmoura/crewai)
-- [AgentOps](https://agentops.ai/)
-- [Google Generative AI](https://ai.google.dev/)
-- [Tavily](https://www.tavily.com/)
-
----
-
-Happy researching with **PublishMate**! 🚀
+Thanks for you time ^_^
