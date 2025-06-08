@@ -1,6 +1,6 @@
 crewai
 streamlit
-dotenv
+python-dotenv
 pydantic
 agentops
 tavily-python
