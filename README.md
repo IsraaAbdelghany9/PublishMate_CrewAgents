@@ -8,7 +8,7 @@ PublishMate is an AI-powered academic assistant that guides you through the rese
 ## 🎥 Demo
 
 A full walkthrough demo of **PublishMate** is available on LinkedIn.  
-📺 [Watch the demo here](https://www.linkedin.com/your-demo-link)
+📺 [Watch the demo here]([https://www.linkedin.com/your-demo-link](https://www.linkedin.com/posts/israa-abdelghany_publishmate-researchmadeeasy-academicwriting-activity-7337497387449339906-Lvnb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfttacBPXINTBQU4ldsesFAWvBJTRtiZ8U)
 
 
 ---
